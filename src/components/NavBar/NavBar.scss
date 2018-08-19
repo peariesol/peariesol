@@ -1,0 +1,88 @@
+a {
+	text-decoration: none;
+}
+
+.navContainer {
+	display: flex;
+	justify-content: space-around;
+	padding: 20px;
+	margin: 0 0 0 12px;
+	max-height: 100px;
+}
+
+.navLink p {
+	margin-top: 0;
+	border-radius: 3px;
+	padding: 5px;
+	background: steelblue;
+	/* color: pink; */
+	animation: colorChange 0.5s linear infinite;
+	animation-play-state: paused;
+	text-shadow: 2px 2px 4px black;
+}
+
+.navLink p:hover {
+	cursor: help;
+	font-size: 25px;
+	animation-play-state: running;
+}
+
+#morecat {
+	color: pink;
+	margin-top: -5px;
+	display: block;
+	animation: navDrop 0.5s ease-in infinite forwards;
+	animation-play-state: paused;
+}
+
+#morecat:hover {
+	animation-play-state: running;
+}
+
+@keyframes navDrop {
+	0% {
+		/* margin-top: 0px; */
+	}
+	100% {
+		margin-top: 500px;
+	}
+}
+
+@keyframes colorChange {
+	0% {
+		background: violet;
+		color: lightgreen;
+	}
+	10% {
+		color: darkorchid;
+	}
+	20% {
+		color: darkcyan;
+	}
+	30% {
+		color: violet;
+	}
+	40% {
+		color: goldenrod;
+	}
+	50% {
+		background: yellowgreen;
+		color: saddlebrown;
+	}
+	60% {
+		color: crimson;
+	}
+	70% {
+		color: blanchedalmond;
+	}
+	80% {
+		color: darkolivegreen;
+	}
+	90% {
+		color: lightskyblue;
+	}
+	100% {
+		background: steelblue;
+		color: seagreen;
+	}
+}

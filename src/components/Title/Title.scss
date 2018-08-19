@@ -1,0 +1,56 @@
+.titleContainer {
+	margin: 0;
+	padding: 20px;
+	width: 100%;
+	// height: 80px;
+	background: springgreen;
+}
+
+.titleBox {
+	// border: 30px solid black;
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	height: 150px;
+	// background: radial-gradient(crimson, purple, darkblue, black);
+	position: relative;
+	animation: slide 10s linear infinite alternate,
+		wiggle 1s linear infinite alternate;
+	animation-play-state: running;
+}
+
+.titleBox:hover {
+	cursor: pointer;
+}
+
+.title {
+	margin: 0;
+	padding: 10px;
+	font-size: 50px;
+	font-family: cursive;
+	text-align: center;
+	text-shadow: 20px 20px !important;
+}
+
+.title:hover {
+	// animation-play-state: running;
+}
+
+@keyframes wiggle {
+	0% {
+		top: -20px;
+	}
+	100% {
+		top: 20px;
+	}
+}
+
+@keyframes slide {
+	0% {
+		left: calc(-50% + 50px);
+	}
+	100% {
+		left: calc(50% - 50px);
+	}
+}
