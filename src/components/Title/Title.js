@@ -45,20 +45,14 @@ class Title extends Component {
         )`
 		console.log(background)
 		return (
-			<div className="titleContainer">
-				<link
-					href="https://fonts.googleapis.com/css?family=Fredoka+One&effect=fire-animation"
-					rel="stylesheet"
-				/>
-				<span
-					onMouseDown={this.mouseDown}
-					onMouseUp={this.mouseUp}
-					className="titleBox"
-					onClick={this.handleClick}
-					style={{ background: background }}
-				>
-					<h2 className="title font-effect-fire-animation">Pearie Sol</h2>
-				</span>
+			<div
+				onMouseDown={this.mouseDown}
+				onMouseUp={this.mouseUp}
+				className="titleBox"
+				onClick={this.handleClick}
+				style={{ background: background }}
+			>
+				<h2 className="title font-effect-fire-animation">Pearie Sol</h2>
 			</div>
 		)
 	}

@@ -20,12 +20,16 @@ const NavBar = () => {
 				{navLinks.map(link => (
 					<span key={link.value} className="navLink">
 						{link.external ? (
-							<a id={link.value} href={link.path}>
-								<p className="navText">{link.text}</p>
+							<a href={link.path}>
+								<p id={link.value} className="navText">
+									{link.text}
+								</p>
 							</a>
 						) : (
-							<Link id={link.value} to={link.path}>
-								<p className="navText">{link.text}</p>
+							<Link to={link.path}>
+								<p id={link.value} className="navText">
+									{link.text}
+								</p>
 							</Link>
 						)}
 					</span>
