@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { random } from 'lodash'
 import NavBar from '../NavBar/NavBar'
 import Title from '../Title/Title'
+import Home from '../../Pages/Home/Home'
 import './App.css'
 
 const cursors = [
@@ -27,15 +28,17 @@ class App extends Component {
 		})
 	}
 	render() {
-		console.log(this.state.cursor)
 		return (
-			<div
-				onMouseOver={this.randomCursor}
-				style={{ cursor: this.state.cursor }}
-			>
+			<React.Fragment>
+				<div
+					onMouseOver={this.randomCursor}
+					style={{ cursor: this.state.cursor }}
+				>
+					<NavBar />
+				</div>
 				<Title />
-				<NavBar />
-			</div>
+				<Home />
+			</React.Fragment>
 		)
 	}
 }

@@ -1,0 +1,47 @@
+.home {
+	background: steelblue;
+	height: 100vw;
+}
+
+.catBox {
+	display: flex;
+	justify-content: space-between;
+}
+
+.catRight {
+	transform: scaleX(-1);
+}
+
+.cat:hover {
+	position: relative;
+	top: 200px;
+}
+
+.eyeBox {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	height: 64px;
+}
+
+.eye {
+	font-size: 4em;
+	margin: 0 10px;
+	padding: 0;
+	cursor: default;
+}
+
+.playBlink {
+	animation: blink 1s ease 2 alternate;
+}
+
+@keyframes blink {
+	0% {
+		transform: rotateX(0);
+	}
+
+	100% {
+		transform: rotateX(90deg);
+	}
+}

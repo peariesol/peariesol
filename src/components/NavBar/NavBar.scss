@@ -1,5 +1,7 @@
 a {
 	text-decoration: none;
+	cursor: inherit;
+	color: inherit;
 }
 
 .navContainer {
@@ -20,20 +22,26 @@ a {
 	padding: 4px;
 	height: 24px;
 	color: lightgreen;
-}
-
-.navLink p {
-	margin: 0;
+	font-size: 20px;
 	animation: colorChange 0.5s linear infinite;
 	animation-play-state: paused;
-	text-shadow: 2px 2px 1px black;
-	font-size: 20px;
+}
+
+.navLink {
+	p {
+		margin: 0;
+		text-shadow: 2px 2px 1px black;
+	}
+}
+
+.navLink:hover {
+	font-size: 25px !important;
+	cursor: help;
+	animation-play-state: running;
 }
 
 .navLink p:hover {
-	cursor: help;
-	font-size: 25px;
-	animation-play-state: running;
+	// cursor: default;
 }
 
 #morecat {

@@ -43,7 +43,6 @@ class Title extends Component {
             ${this.state.colors.b}, 
             ${this.state.colors.c}
         )`
-		console.log(background)
 		return (
 			<div
 				onMouseDown={this.mouseDown}
