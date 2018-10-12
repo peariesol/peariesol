@@ -1,16 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Route, Link, Redirect, Switch } from 'react-router-dom'
 import { navLinks } from '../../Utils/NavLinks'
 import './NavBar.scss'
 
+const [red, green, blue, alpha] = [
+	Math.random() * 255,
+	Math.random() * 255,
+	Math.random() * 255,
+	Math.random()
+]
+
 const NavBar = () => {
-	const [red, green, blue, alpha] = [
-		Math.random() * 255,
-		Math.random() * 255,
-		Math.random() * 255,
-		Math.random()
-	]
 	return (
 		<React.Fragment>
 			<nav
@@ -44,7 +44,5 @@ const NavBar = () => {
 		</React.Fragment>
 	)
 }
-
-NavBar.propTypes = {}
 
 export default NavBar

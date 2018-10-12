@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { colorNames } from '../../Utils/ColorNames'
+import PropTypes from 'prop-types'
 import { random } from 'lodash'
 import './Title.css'
-
-let timeout = ''
 
 class Title extends Component {
 	constructor(props) {
@@ -27,16 +26,6 @@ class Title extends Component {
 		})
 	}
 
-	mouseDown = () => {
-		timeout = setInterval(() => {
-			// console.log('hey')
-		}, 100)
-	}
-
-	mouseUp = () => {
-		clearInterval(timeout)
-	}
-
 	render() {
 		const background = `radial-gradient(
             ${this.state.colors.a}, 
@@ -45,16 +34,19 @@ class Title extends Component {
         )`
 		return (
 			<div
-				onMouseDown={this.mouseDown}
-				onMouseUp={this.mouseUp}
+				onMouseOver={this.props.randomCursor}
 				className="titleBox"
 				onClick={this.handleClick}
-				style={{ background: background }}
+				style={{ background }}
 			>
 				<h2 className="title font-effect-fire-animation">Pearie Sol</h2>
 			</div>
 		)
 	}
+}
+
+Title.PropTypes = {
+	randomCursor: PropTypes.func.isRequired
 }
 
 export default Title

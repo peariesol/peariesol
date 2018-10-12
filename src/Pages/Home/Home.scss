@@ -1,6 +1,11 @@
 .home {
-	background: steelblue;
+	background: black;
 	height: 100vw;
+}
+
+.home > span {
+	top: 0 !important;
+	left: 0 !important;
 }
 
 .catBox {
@@ -14,7 +19,7 @@
 
 .cat:hover {
 	position: relative;
-	top: 200px;
+	// top: 200px;
 }
 
 .eyeBox {

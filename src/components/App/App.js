@@ -18,7 +18,7 @@ class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			cursor: cursors[random(0, cursors.length)]
+			cursor: 'default'
 		}
 	}
 
@@ -27,18 +27,14 @@ class App extends Component {
 			cursor: cursors[random(0, cursors.length)]
 		})
 	}
+
 	render() {
 		return (
-			<React.Fragment>
-				<div
-					onMouseOver={this.randomCursor}
-					style={{ cursor: this.state.cursor }}
-				>
-					<NavBar />
-				</div>
-				<Title />
+			<div style={{ cursor: this.state.cursor }}>
+				<NavBar />
+				<Title randomCursor={this.randomCursor} />
 				<Home />
-			</React.Fragment>
+			</div>
 		)
 	}
 }
