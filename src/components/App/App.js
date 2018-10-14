@@ -5,26 +5,20 @@ import Title from '../Title/Title'
 import Home from '../../Pages/Home/Home'
 import './App.css'
 
-const cursors = [
-	'help',
-	'wait',
-	'crosshair',
-	'pointer',
-	'not-allowed',
-	'zoom-in'
-]
+//http://www.rw-designer.com/gallery
+const cursors = ['fire', 'horse', 'skull', 'skull', 'snake_skin', 'snake_skull']
 
 class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			cursor: 'default'
+			cursor: 'url("cursors/fire.cur"), help'
 		}
 	}
 
 	randomCursor = () => {
 		this.setState({
-			cursor: cursors[random(0, cursors.length)]
+			cursor: `url(cursors/${cursors[random(0, cursors.length - 1)]}.cur), help`
 		})
 	}
 

@@ -45,7 +45,7 @@ class Title extends Component {
 	}
 }
 
-Title.PropTypes = {
+Title.propTypes = {
 	randomCursor: PropTypes.func.isRequired
 }
 

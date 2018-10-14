@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Sparkle from 'react-sparkle'
 import './Home.css'
 
 let timer = null
@@ -64,17 +63,7 @@ class Home extends Component {
 				className="home"
 				onMouseMove={this.trackMouse}
 				style={{ position: 'relative' }}
-				transparen
 			>
-				<Sparkle
-					minSize={3000}
-					maxSize={3000}
-					count={1}
-					flickerSpeed={'slowest'}
-					color={'444'}
-					overflowPx={20}
-					className={`sparkle`}
-				/>
 				<div className="catBox">
 					<img className="cat" src="images/cat-walk.gif" alt="cat walk" />
 					<main>
@@ -102,13 +91,6 @@ class Home extends Component {
 								position: 'relative'
 							}}
 						>
-							<Sparkle
-								color={`random`}
-								minSize={5}
-								maxSize={8}
-								count={20}
-								flickerSpeed={'slow'}
-							/>
 							<p
 								style={{ fontSize: 64, color: 'green' }}
 								className={`font-effect-distressed font-effect-3d`}
@@ -134,7 +116,7 @@ class Home extends Component {
 									height: 40,
 									width: 40,
 									position: 'absolute',
-									top: mouseY >= 100 ? mouseY - 20 : 100,
+									top: mouseY >= 100 ? mouseY - 120 : 100,
 									left: mouseX - 20
 							  }
 							: {}
