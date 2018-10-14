@@ -13,13 +13,17 @@
 	justify-content: space-between;
 }
 
-.catRight {
-	transform: scaleX(-1);
+.cat {
+	width: 200px;
+	height: 200px;
 }
 
 .cat:hover {
 	position: relative;
-	// top: 200px;
+}
+
+.catRight {
+	transform: scaleX(-1);
 }
 
 .eyeBox {
@@ -35,6 +39,25 @@
 	margin: 0 10px;
 	padding: 0;
 	cursor: default;
+}
+
+.mainImageBox {
+	border: 3px limegreen outset;
+}
+
+.mainImage {
+	width: 200px;
+}
+
+.mainImageTitle {
+	margin: 0;
+	font-size: 64px;
+	font-weight: bold;
+}
+
+.mainTitleBox {
+	display: flex;
+	flex-direction: row;
 }
 
 .playBlink {

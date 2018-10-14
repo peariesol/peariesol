@@ -62,7 +62,13 @@ class Home extends Component {
 			<div
 				className="home"
 				onMouseMove={this.trackMouse}
-				style={{ position: 'relative' }}
+				style={{
+					position: 'relative',
+					height: '100vh',
+					backgroundImage: "url('textures/hauntedhouselightening.gif')",
+					backgroundSize: '300px',
+					backgroundRepeat: 'repeat'
+				}}
 			>
 				<div className="catBox">
 					<img className="cat" src="images/cat-walk.gif" alt="cat walk" />
@@ -83,20 +89,22 @@ class Home extends Component {
 								👁️
 							</span>
 						</div>
-						<div
-							style={{
-								border: '2px purple solid',
-								padding: 30,
-								margin: 15,
-								position: 'relative'
-							}}
-						>
+						<div className="mainImageBox">
+							<img className="mainImage" src="self_photos/tape_art1.jpg" />
+							<img src="icons/firetiki.gif" />
+						</div>
+						<img src="icons/lightening_break.gif" />
+						<div className="mainTitleBox">
+							<img
+								src="icons/horsewalk.gif"
+								style={{ width: 20, height: 70 }}
+							/>
 							<p
-								style={{ fontSize: 64, color: 'green' }}
-								className={`font-effect-distressed font-effect-3d`}
+								className={`mainImageTitle font-effect-distressed font-effect-3d font-effect-fire-animation`}
 							>
-								Kick it
+								Pearie Sol
 							</p>
+							<img src="icons/horsewalk.gif" />
 						</div>
 					</main>
 					<img
@@ -104,6 +112,19 @@ class Home extends Component {
 						src="images/cat-walk.gif"
 						alt="cat walk"
 					/>
+				</div>
+				<div
+					style={{
+						display: 'flex',
+						flexDirection: 'row',
+						justifyContent: 'center',
+						height: 40
+					}}
+				>
+					<img src="icons/signguestbook.gif" />
+					<img src="icons/fire420.gif" />
+					<img src="icons/candle_book.gif" />
+					<img src="icons/devilfire.gif" />
 				</div>
 				<img
 					onMouseOver={this.setNetscapeFollow}
@@ -119,7 +140,7 @@ class Home extends Component {
 									top: mouseY >= 100 ? mouseY - 120 : 100,
 									left: mouseX - 20
 							  }
-							: {}
+							: { position: 'fixed', top: 400, left: 20 }
 					}
 				/>
 			</div>

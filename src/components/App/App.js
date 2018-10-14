@@ -5,7 +5,6 @@ import Title from '../Title/Title'
 import Home from '../../Pages/Home/Home'
 import './App.css'
 
-//http://www.rw-designer.com/gallery
 const cursors = ['fire', 'horse', 'skull', 'skull', 'snake_skin', 'snake_skull']
 
 class App extends Component {
