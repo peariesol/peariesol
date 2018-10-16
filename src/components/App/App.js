@@ -26,7 +26,6 @@ class App extends Component {
 			<div style={{ cursor: this.state.cursor }}>
 				<NavBar />
 				<Title randomCursor={this.randomCursor} />
-				<Home />
 			</div>
 		)
 	}

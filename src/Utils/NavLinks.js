@@ -49,7 +49,7 @@ export const navLinks = [
 	},
 	{
 		text: 'more cat',
-		value: 'morecat',
+		value: 'moreCat',
 		external: false,
 		path: './ok'
 	}

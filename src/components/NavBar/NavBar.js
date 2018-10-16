@@ -1,6 +1,10 @@
 import React from 'react'
 import { Route, Link, Redirect, Switch } from 'react-router-dom'
 import { navLinks } from '../../Utils/NavLinks'
+import Home from '../../Pages/Home/Home'
+import Press from '../../Pages/Press/Press'
+import Shows from '../../Pages/Shows/Shows'
+import MoreCat from '../../Pages/MoreCat/MoreCat'
 import './NavBar.scss'
 
 const [red, green, blue, alpha] = [
@@ -36,10 +40,11 @@ const NavBar = () => {
 				))}
 			</nav>
 			<Switch>
-				{navLinks.filter(link => !link.external).map(link => (
-					<Route key={link.value} path={link.path} render={() => <div />} />
-				))}
-				<Route path="/*" render={() => <Redirect to="/" />} />
+				<Route path="/press" render={props => <Press {...props} />} />
+				<Route path="/shows" render={props => <Shows {...props} />} />
+				<Route path="/ok" render={props => <MoreCat {...props} />} />
+				<Route path="/" render={props => <Home {...props} />} />
+				<Route path="/*" render={props => <Redirect to="/" {...props} />} />
 			</Switch>
 		</React.Fragment>
 	)

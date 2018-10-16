@@ -1,6 +1,6 @@
 .home {
 	background: black;
-	height: 100vw;
+	height: 100vh;
 }
 
 .home > span {
@@ -47,6 +47,10 @@
 
 .mainImage {
 	width: 200px;
+}
+
+.invertColors {
+	filter: invert(100%);
 }
 
 .mainImageTitle {

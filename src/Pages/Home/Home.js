@@ -11,7 +11,8 @@ class Home extends Component {
 			customClass: '',
 			mouseX: null,
 			mouseY: null,
-			netscapeFollow: false
+			netscapeFollow: false,
+			invertColors: false
 		}
 	}
 
@@ -26,9 +27,7 @@ class Home extends Component {
 	randomize() {
 		timer = setTimeout(() => {
 			const newNumber = Math.ceil(Math.random() * 8)
-			this.setState({
-				randomNumber: newNumber
-			})
+			this.setState({ randomNumber: newNumber })
 			newNumber === 6 && this.animateBlink()
 			this.randomize()
 		}, 4000)
@@ -38,11 +37,7 @@ class Home extends Component {
 		this.setState({
 			customClass: 'playBlink'
 		})
-		setTimeout(() => {
-			this.setState({
-				customClass: ''
-			})
-		}, 3000)
+		setTimeout(() => this.setState({ customClass: '' }), 3000)
 	}
 
 	trackMouse = e => {
@@ -56,15 +51,25 @@ class Home extends Component {
 		this.setState({ netscapeFollow: true })
 	}
 
+	setInvertColors = () => {
+		this.setState({ invertColors: !this.state.invertColors })
+	}
+
 	render() {
-		const { customClass, mouseX, mouseY, netscapeFollow } = this.state
+		const {
+			customClass,
+			mouseX,
+			mouseY,
+			netscapeFollow,
+			invertColors
+		} = this.state
 		return (
 			<div
 				className="home"
 				onMouseMove={this.trackMouse}
 				style={{
 					position: 'relative',
-					height: '100vh',
+					// height: '100vh',
 					backgroundImage: "url('textures/hauntedhouselightening.gif')",
 					backgroundSize: '300px',
 					backgroundRepeat: 'repeat'
@@ -81,16 +86,22 @@ class Home extends Component {
 							>
 								👁️
 							</span>
-							<span
-								className={`eye eyeRight ${customClass}`}
-								aria-label="right eye"
-								role="img"
-							>
-								👁️
-							</span>
+							{false && (
+								<span
+									className={`eye eyeRight ${customClass}`}
+									aria-label="right eye"
+									role="img"
+								>
+									👁️
+								</span>
+							)}
 						</div>
 						<div className="mainImageBox">
-							<img className="mainImage" src="self_photos/tape_art1.jpg" />
+							<img
+								onClick={this.setInvertColors}
+								className={`mainImage ${invertColors && 'invertColors'}`}
+								src="self_photos/tape_art1.jpg"
+							/>
 							<img src="icons/firetiki.gif" />
 						</div>
 						<img src="icons/lightening_break.gif" />
