@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import MainImageTitle from '../../components/MainImageTitle/MainImageTitle'
+import CenterColumn from './CenterColumn/CenterColumn'
+import Netscape from '../../components/Netscape/Netscape'
 import './Home.css'
 
 let timer = null
@@ -9,7 +10,7 @@ class Home extends Component {
 		super(props)
 		this.state = {
 			randomNumber: 0,
-			customClass: '',
+			eyeBlink: '',
 			mouseX: null,
 			mouseY: null,
 			netscapeFollow: false,
@@ -36,9 +37,9 @@ class Home extends Component {
 
 	animateBlink() {
 		this.setState({
-			customClass: 'playBlink'
+			eyeBlink: 'playBlink'
 		})
-		setTimeout(() => this.setState({ customClass: '' }), 3000)
+		setTimeout(() => this.setState({ eyeBlink: '' }), 3000)
 	}
 
 	trackMouse = e => {
@@ -58,7 +59,7 @@ class Home extends Component {
 
 	render() {
 		const {
-			customClass,
+			eyeBlink,
 			mouseX,
 			mouseY,
 			netscapeFollow,
@@ -74,56 +75,37 @@ class Home extends Component {
 				}}
 			>
 				<div className="homeTop">
-					<img
-						className="cat"
-						src="images/cat-compress.gif"
-						alt="cat walk"
-						onClick={this.setInvertColors}
-					/>
-					<div>
-						<div className="eyeBox">
-							<img src="icons/devilfire-compress.gif" className="devilFire" />
-							<span
-								className={`eye ${customClass}`}
-								aria-label="all knowing eye"
-								role="img"
-							>
-								👁️
-							</span>
-							<img src="icons/devilfire-compress.gif" className="devilFire" />
-						</div>
-						<MainImageTitle
-							invertColors={invertColors}
-							setInvertColors={this.setInvertColors}
+					<div className="leftColumn sideColumn">
+						<img
+							className="cat"
+							src="images/cat-compress.gif"
+							alt="cat walk"
+							onClick={this.setInvertColors}
 						/>
 					</div>
-					<img
-						className="catRight cat"
-						src="images/cat-compress.gif"
-						alt="cat walk"
+					<CenterColumn
+						eyeBlink={eyeBlink}
+						invertColors={invertColors}
+						setInvertColors={this.setInvertColors}
 					/>
+					<div className="rightColumn sideColumn">
+						<img
+							className="catRight cat"
+							src="images/cat-compress.gif"
+							alt="cat walk"
+						/>
+					</div>
 				</div>
 				<div className="homeBottom">
 					<img src="icons/signguestbook-compress.gif" />
 					<img src="icons/fire420-compress.gif" />
 					<img src="icons/candle_book-compress.gif" />
 				</div>
-				<img
-					onMouseOver={this.setNetscapeFollow}
-					className="netscape"
-					src="images/netscape-compress.jpg"
-					alt="netscape logo"
-					style={
-						netscapeFollow
-							? {
-									height: 40,
-									width: 40,
-									position: 'absolute',
-									top: mouseY >= 100 ? mouseY - 120 : 100,
-									left: mouseX - 20
-							  }
-							: { position: 'fixed', top: 400, left: 20 }
-					}
+				<Netscape
+					setNetscapeFollow={this.setNetscapeFollow}
+					netscapeFollow={netscapeFollow}
+					mouseX={mouseX}
+					mouseY={mouseY}
 				/>
 			</div>
 		)

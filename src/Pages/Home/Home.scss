@@ -36,41 +36,10 @@
 	transform: scaleX(-1);
 }
 
-.eye {
-	text-align: center;
-	display: block;
-	height: 64px;
-	font-size: 4em;
-	margin: 10px 0;
-	padding: 0;
-	cursor: inherit;
-}
-
-.eyeBox {
-	height: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
 .devilFire {
 	transform: scale(0.4);
 }
 
 .invertColors {
 	filter: invert(100%);
-}
-
-.playBlink {
-	animation: blink 1s ease 2 alternate;
-}
-
-@keyframes blink {
-	0% {
-		transform: rotateX(0);
-	}
-
-	100% {
-		transform: rotateX(90deg);
-	}
 }

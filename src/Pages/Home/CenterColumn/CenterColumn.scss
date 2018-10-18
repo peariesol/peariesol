@@ -1,0 +1,71 @@
+.centerColumn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.eyeBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 80px;
+}
+
+.eye {
+	text-align: center;
+	display: block;
+	height: 64px;
+	font-size: 4em;
+	margin: 10px 0;
+	padding: 0;
+	cursor: inherit;
+}
+
+.playBlink {
+	animation: blink 1s ease 2 alternate;
+}
+
+.devilFire {
+	transform: scale(0.4);
+}
+
+.mainImageBox {
+	border: 3px limegreen outset;
+}
+
+.mainImageBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mainTitleBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.mainImage {
+	width: 200px;
+}
+
+.mainImageTitle {
+	margin: 0;
+	font-size: 36px;
+	color: red;
+	font-family: 'Nosifer', cursive;
+	font-weight: bold;
+}
+
+@keyframes blink {
+	0% {
+		transform: rotateX(0);
+	}
+
+	100% {
+		transform: rotateX(90deg);
+	}
+}
