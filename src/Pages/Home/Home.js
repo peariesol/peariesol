@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import MainImageTitle from '../../components/MainImageTitle/MainImageTitle'
 import './Home.css'
 
 let timer = null
@@ -63,84 +64,54 @@ class Home extends Component {
 			netscapeFollow,
 			invertColors
 		} = this.state
+
 		return (
 			<div
 				className="home"
 				onMouseMove={this.trackMouse}
 				style={{
-					position: 'relative',
-					// height: '100vh',
-					backgroundImage: "url('textures/hauntedhouselightening.gif')",
-					backgroundSize: '300px',
-					backgroundRepeat: 'repeat'
+					backgroundImage: "url('textures/hauntedhouselightening-compress.gif')"
 				}}
 			>
-				<div className="catBox">
-					<img className="cat" src="images/cat-walk.gif" alt="cat walk" />
-					<main>
+				<div className="homeTop">
+					<img
+						className="cat"
+						src="images/cat-compress.gif"
+						alt="cat walk"
+						onClick={this.setInvertColors}
+					/>
+					<div>
 						<div className="eyeBox">
+							<img src="icons/devilfire-compress.gif" className="devilFire" />
 							<span
-								className={`eye eyeLeft ${customClass}`}
-								aria-label="left eye"
+								className={`eye ${customClass}`}
+								aria-label="all knowing eye"
 								role="img"
 							>
 								👁️
 							</span>
-							{false && (
-								<span
-									className={`eye eyeRight ${customClass}`}
-									aria-label="right eye"
-									role="img"
-								>
-									👁️
-								</span>
-							)}
+							<img src="icons/devilfire-compress.gif" className="devilFire" />
 						</div>
-						<div className="mainImageBox">
-							<img
-								onClick={this.setInvertColors}
-								className={`mainImage ${invertColors && 'invertColors'}`}
-								src="self_photos/tape_art1.jpg"
-							/>
-							<img src="icons/firetiki.gif" />
-						</div>
-						<img src="icons/lightening_break.gif" />
-						<div className="mainTitleBox">
-							<img
-								src="icons/horsewalk.gif"
-								style={{ width: 20, height: 70 }}
-							/>
-							<p
-								className={`mainImageTitle font-effect-distressed font-effect-3d font-effect-fire-animation`}
-							>
-								Pearie Sol
-							</p>
-							<img src="icons/horsewalk.gif" />
-						</div>
-					</main>
+						<MainImageTitle
+							invertColors={invertColors}
+							setInvertColors={this.setInvertColors}
+						/>
+					</div>
 					<img
 						className="catRight cat"
-						src="images/cat-walk.gif"
+						src="images/cat-compress.gif"
 						alt="cat walk"
 					/>
 				</div>
-				<div
-					style={{
-						display: 'flex',
-						flexDirection: 'row',
-						justifyContent: 'center',
-						height: 40
-					}}
-				>
-					<img src="icons/signguestbook.gif" />
-					<img src="icons/fire420.gif" />
-					<img src="icons/candle_book.gif" />
-					<img src="icons/devilfire.gif" />
+				<div className="homeBottom">
+					<img src="icons/signguestbook-compress.gif" />
+					<img src="icons/fire420-compress.gif" />
+					<img src="icons/candle_book-compress.gif" />
 				</div>
 				<img
 					onMouseOver={this.setNetscapeFollow}
 					className="netscape"
-					src="images/netscape.jpg"
+					src="images/netscape-compress.jpg"
 					alt="netscape logo"
 					style={
 						netscapeFollow

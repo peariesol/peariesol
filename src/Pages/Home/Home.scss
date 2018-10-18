@@ -1,6 +1,9 @@
 .home {
 	background: black;
 	height: 100vh;
+	position: relative;
+	background-size: 300px;
+	background-repeat: repeat;
 }
 
 .home > span {
@@ -8,9 +11,16 @@
 	left: 0 !important;
 }
 
-.catBox {
+.homeTop {
 	display: flex;
 	justify-content: space-between;
+}
+
+.homeBottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	height: 40px;
 }
 
 .cat {
@@ -26,42 +36,29 @@
 	transform: scaleX(-1);
 }
 
-.eyeBox {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	height: 64px;
-}
-
 .eye {
+	text-align: center;
+	display: block;
+	height: 64px;
 	font-size: 4em;
-	margin: 0 10px;
+	margin: 10px 0;
 	padding: 0;
-	cursor: default;
+	cursor: inherit;
 }
 
-.mainImageBox {
-	border: 3px limegreen outset;
+.eyeBox {
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
-.mainImage {
-	width: 200px;
+.devilFire {
+	transform: scale(0.4);
 }
 
 .invertColors {
 	filter: invert(100%);
-}
-
-.mainImageTitle {
-	margin: 0;
-	font-size: 64px;
-	font-weight: bold;
-}
-
-.mainTitleBox {
-	display: flex;
-	flex-direction: row;
 }
 
 .playBlink {

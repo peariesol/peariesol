@@ -39,7 +39,7 @@ class Title extends Component {
 				onClick={this.handleClick}
 				style={{ background }}
 			>
-				<h2 className="title font-effect-fire-animation">Pearie Sol</h2>
+				<h2 className="title">Pearie Sol</h2>
 			</div>
 		)
 	}

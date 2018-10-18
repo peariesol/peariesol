@@ -4,5 +4,11 @@
         "PEARIE",
         "Randomizer",
         "sisterpolygon"
-    ]
+    ],
+    "files.exclude": {
+        "**/.svn": false,
+        "**/*.css": true,
+        "**/registerServiceWorker.js": true,
+        "node_modules": true
+    }
 }

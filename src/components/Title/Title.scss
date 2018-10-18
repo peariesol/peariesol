@@ -7,8 +7,8 @@
 	width: 150px;
 	height: 150px;
 	position: absolute;
-	animation: slide 10s linear infinite alternate,
-		wiggle 3s linear infinite alternate;
+	animation: horizontalMove 8s linear infinite alternate,
+		verticalMove 5s linear infinite alternate;
 	animation-play-state: running;
 }
 
@@ -18,11 +18,11 @@
 	font-size: 50px;
 	line-height: 60px;
 	max-height: 150px;
-	font-family: cursive;
+	font-family: 'Pinyon Script', cursive;
 	text-align: center;
 }
 
-@keyframes wiggle {
+@keyframes verticalMove {
 	0% {
 		top: 100px;
 	}
@@ -31,7 +31,7 @@
 	}
 }
 
-@keyframes slide {
+@keyframes horizontalMove {
 	0% {
 		left: 0;
 	}
