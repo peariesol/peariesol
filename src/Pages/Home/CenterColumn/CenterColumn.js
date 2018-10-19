@@ -5,7 +5,11 @@ import './CenterColumn.css'
 const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 	<div className="centerColumn">
 		<div className="eyeBox">
-			<img src="icons/devilfire-compress.gif" className="devilFire" />
+			<img
+				src="icons/devilfire-compress.gif"
+				className="devilFire"
+				alt="devil fire"
+			/>
 			<span
 				className={`eye ${eyeBlink}`}
 				aria-label="all knowing eye, hi ahmad"
@@ -13,25 +17,27 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 			>
 				👁️
 			</span>
-			<img src="icons/devilfire-compress.gif" className="devilFire" />
+			<img
+				src="icons/devilfire-compress.gif"
+				className="devilFire"
+				alt="devil fire"
+			/>
 		</div>
 		<div className="mainImageBox">
-			<img src="icons/firetiki-compress.gif" />
+			<img src="icons/firetiki-compress.gif" alt="tiki fire" />
 			<img
 				onClick={setInvertColors}
 				className={`mainImage ${invertColors && 'invertColors'}`}
 				src="self_photos/tape_art1-compress.jpg"
+				alt="self"
 			/>
-			<img src="icons/firetiki-compress.gif" />
+			<img src="icons/firetiki-compress.gif" alt="tiki fire" />
 		</div>
-		<img src="icons/lightening_break-compress.gif" />
+		<img src="icons/lightening_break-compress.gif" alt="lightening" />
 		<div className="mainTitleBox">
-			<img
-				src="icons/horsewalk-compress.gif"
-				style={{ width: 20, height: 70 }}
-			/>
+			<img src="icons/horsewalk-compress.gif" alt="horse" />
 			<p className={`mainImageTitle font-effect-fire-animation`}>Pearie Sol</p>
-			<img src="icons/horsewalk-compress.gif" />
+			<img src="icons/horsewalk-compress.gif" alt="horse" />
 		</div>
 	</div>
 )

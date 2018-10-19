@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Shows.css'
 
-const Shows = ({ shows, upcoming }) => {
+const Shows = ({ shows, upcoming, title }) => {
 	const showDisplay =
 		shows.length >= 1 ? (
 			shows.map(({ date, venue, location, otherActs }) => (
@@ -10,25 +10,25 @@ const Shows = ({ shows, upcoming }) => {
 					<li>
 						<ul>
 							<li>
-								<span className="showListItem">
+								<span className="showListItemRow">
 									<strong>Date: </strong>
 									{date}
 								</span>
 							</li>
 							<li>
-								<span className="showListItem">
+								<span className="showListItemRow">
 									<strong>Location: </strong>
 									{location}
 								</span>
 							</li>
 							<li>
-								<span className="showListItem">
+								<span className="showListItemRow">
 									<strong>Venue: </strong>
 									{venue}
 								</span>
 							</li>
 							<li>
-								<span className="showListItem">
+								<span className="showListItemRow">
 									<strong>Other Acts: </strong>
 									{otherActs}
 								</span>
@@ -39,21 +39,20 @@ const Shows = ({ shows, upcoming }) => {
 				</ol>
 			))
 		) : (
-			<p>🕯️ No upcoming shows 🕯️</p>
+			<span>
+				<span role="img" aria-label="candle">
+					🕯
+				</span>
+				{'  No upcoming shows  '}
+				<span role="img" aria-label="candle">
+					🕯
+				</span>
+				️
+			</span>
 		)
 	return (
-		<div
-			className="showList"
-			style={{
-				backgroundImage: upcoming
-					? 'url("textures/heaven2.png")'
-					: 'url("textures/graveyard.jpg")',
-				backgroundSize: '600px',
-				color: 'yellow',
-				fontSize: 20,
-				textAlign: 'center'
-			}}
-		>
+		<div className="showList">
+			<h3 className="showType">{title}</h3>
 			{showDisplay}
 		</div>
 	)
@@ -66,7 +65,8 @@ Shows.propTypes = {
 		location: PropTypes.string.isRequired,
 		otherActs: PropTypes.string.isRequired
 	}).isRequired,
-	upcoming: PropTypes.bool.isRequired
+	upcoming: PropTypes.bool.isRequired,
+	title: PropTypes.string.isRequired
 }
 
 export default Shows

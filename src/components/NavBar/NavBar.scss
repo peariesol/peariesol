@@ -4,12 +4,16 @@ a {
 	color: inherit;
 }
 
+.page {
+	height: 90vh;
+}
+
 .navContainer {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
-	height: 100px;
+	max-height: 10vh;
 	border-radius: 3px;
 	border: 2px double maroon;
 	box-shadow: 1px 1px 2px grey;

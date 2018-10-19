@@ -2,11 +2,12 @@ import React from 'react'
 import moment from 'moment'
 import Shows from './components/Shows'
 import showList from '../../Utils/ShowList'
+import './ShowsPage.css'
 
 const previousShows = []
 const upcomingShows = []
 
-showList.map(show => {
+showList.forEach(show => {
 	if (moment(show.date).diff(moment()) < 0) {
 		previousShows.push(show)
 	} else {
@@ -14,19 +15,24 @@ showList.map(show => {
 	}
 })
 
-console.log(previousShows)
-console.log(upcomingShows)
-
 const ShowsPage = () => {
 	return (
 		<div className="showsPage">
-			<div className="upcomingShows">
-				<h3 className="showType">Upcoming Shows</h3>
-				<Shows shows={upcomingShows} upcoming={true} />
+			<div
+				style={{
+					backgroundImage: 'url("textures/heaven2.png")',
+					backgroundSize: 400
+				}}
+			>
+				<Shows shows={upcomingShows} upcoming={true} title="Upcoming Shows" />
 			</div>
-			<div className="previousShows">
-				<h3 className="showType">Past Shows</h3>
-				<Shows shows={previousShows} upcoming={false} />
+			<div
+				style={{
+					backgroundImage: 'url("textures/graveyard.jpg")',
+					backgroundSize: 550
+				}}
+			>
+				<Shows shows={previousShows} upcoming={false} title="Previous Shows" />
 			</div>
 		</div>
 	)

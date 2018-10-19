@@ -28,7 +28,7 @@ class Home extends Component {
 
 	randomize() {
 		timer = setTimeout(() => {
-			const newNumber = Math.ceil(Math.random() * 8)
+			const newNumber = Math.ceil(Math.random() * 6)
 			this.setState({ randomNumber: newNumber })
 			newNumber === 6 && this.animateBlink()
 			this.randomize()
@@ -71,7 +71,9 @@ class Home extends Component {
 				className="home"
 				onMouseMove={this.trackMouse}
 				style={{
-					backgroundImage: "url('textures/hauntedhouselightening-compress.gif')"
+					backgroundImage:
+						"url('textures/hauntedhouselightening-compress.gif')",
+					overflow: 'hidden'
 				}}
 			>
 				<div className="homeTop">
@@ -97,9 +99,9 @@ class Home extends Component {
 					</div>
 				</div>
 				<div className="homeBottom">
-					<img src="icons/signguestbook-compress.gif" />
-					<img src="icons/fire420-compress.gif" />
-					<img src="icons/candle_book-compress.gif" />
+					<img src="icons/signguestbook-compress.gif" alt="guest book" />
+					<img src="icons/fire420-compress.gif" alt="fire 420" />
+					<img src="icons/candle_book-compress.gif" alt="candle book" />
 				</div>
 				<Netscape
 					setNetscapeFollow={this.setNetscapeFollow}
