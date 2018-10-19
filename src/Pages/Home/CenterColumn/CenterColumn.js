@@ -24,14 +24,28 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 			/>
 		</div>
 		<div className="mainImageBox">
-			<img src="icons/firetiki-compress.gif" alt="tiki fire" />
+			<div
+				className="mainImageBoxBackground"
+				style={{ backgroundImage: 'url("textures/bricks.jpg")' }}
+			/>
+			<img
+				className="centerImages tikiImage"
+				src="icons/firetiki-compress.gif"
+				alt="tiki fire"
+			/>
 			<img
 				onClick={setInvertColors}
-				className={`mainImage ${invertColors && 'invertColors'}`}
+				className={`centerImages mainImage ${
+					invertColors ? 'invertColors' : ''
+				}`}
 				src="self_photos/tape_art1-compress.jpg"
 				alt="self"
 			/>
-			<img src="icons/firetiki-compress.gif" alt="tiki fire" />
+			<img
+				className="centerImages tikiImage"
+				src="icons/firetiki-compress.gif"
+				alt="tiki fire"
+			/>
 		</div>
 		<img src="icons/lightening_break-compress.gif" alt="lightening" />
 		<div className="mainTitleBox">

@@ -76,6 +76,11 @@ class Home extends Component {
 					overflow: 'hidden'
 				}}
 			>
+				<img
+					src="gifs/blood_drip.gif"
+					alt="blood drip"
+					style={{ width: '100vw', maxHeight: 30 }}
+				/>
 				<div className="homeTop">
 					<div className="leftColumn sideColumn">
 						<img
