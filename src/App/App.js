@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { random } from 'lodash'
-import NavBar from '../NavBar/NavBar'
-import Title from '../Title/Title'
+import NavBar from '../components/NavBar/NavBar'
+import Title from '../components/Title/Title'
 import './App.css'
 
 const cursors = ['fire', 'horse', 'skull', 'skull', 'snake_skin', 'snake_skull']

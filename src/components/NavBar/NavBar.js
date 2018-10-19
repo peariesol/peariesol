@@ -3,7 +3,7 @@ import { Route, Link, Redirect, Switch } from 'react-router-dom'
 import { navLinks } from '../../Utils/NavLinks'
 import Home from '../../Pages/Home/Home'
 import Press from '../../Pages/Press/Press'
-import Shows from '../../Pages/Shows/Shows'
+import Shows from '../../Pages/ShowsPage/ShowsPage'
 import MoreCat from '../../Pages/MoreCat/MoreCat'
 import './NavBar.scss'
 
@@ -23,19 +23,11 @@ const NavBar = () => {
 			>
 				{navLinks.map(link => (
 					<span key={link.value} className="navLink">
-						{link.external ? (
-							<a href={link.path}>
-								<p id={link.value} className="navText">
-									{link.text}
-								</p>
-							</a>
-						) : (
-							<Link to={link.path}>
-								<p id={link.value} className="navText">
-									{link.text}
-								</p>
-							</Link>
-						)}
+						<Link to={link.path}>
+							<p id={link.value} className="navText">
+								{link.text}
+							</p>
+						</Link>
 					</span>
 				))}
 			</nav>

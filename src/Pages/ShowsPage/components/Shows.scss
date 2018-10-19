@@ -1,0 +1,16 @@
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+.showList {
+	min-height: 400px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.showListItem {
+	background: linear-gradient(purple, steelblue, green);
+}
