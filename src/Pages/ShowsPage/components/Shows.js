@@ -2,42 +2,51 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Shows.css'
 
-const Shows = ({ shows, upcoming, title }) => {
+const expFont = (num, x) => Math.pow(num, x)
+
+const maxFont = 20
+
+const Shows = ({ shows, upcoming }) => {
+	const x = Math.log(maxFont) / Math.log(shows.length)
+	let count = shows.length
 	const showDisplay =
 		shows.length >= 1 ? (
-			shows.map(({ date, venue, location, otherActs }) => (
-				<ol>
-					<li>
-						<ul>
-							<li>
-								<span className="showListItemRow">
-									<strong>Date: </strong>
-									{date}
-								</span>
-							</li>
-							<li>
-								<span className="showListItemRow">
-									<strong>Location: </strong>
-									{location}
-								</span>
-							</li>
-							<li>
-								<span className="showListItemRow">
-									<strong>Venue: </strong>
-									{venue}
-								</span>
-							</li>
-							<li>
-								<span className="showListItemRow">
-									<strong>Other Acts: </strong>
-									{otherActs}
-								</span>
-							</li>
-						</ul>
-					</li>
-					<br />
-				</ol>
-			))
+			shows.map(({ date, venue, location, otherActs }, index) => {
+				index !== 0 && (count = count - 1)
+				return (
+					<ol>
+						<li style={{ fontSize: expFont(count + 1, x) }}>
+							<ul>
+								<li>
+									<span className="showListItemRow">
+										<strong>Date: </strong>
+										{date}
+									</span>
+								</li>
+								<li>
+									<span className="showListItemRow">
+										<strong>Location: </strong>
+										{location}
+									</span>
+								</li>
+								<li>
+									<span className="showListItemRow">
+										<strong>Venue: </strong>
+										{venue}
+									</span>
+								</li>
+								<li>
+									<span className="showListItemRow">
+										<strong>Other Acts: </strong>
+										{otherActs}
+									</span>
+								</li>
+							</ul>
+						</li>
+						<br />
+					</ol>
+				)
+			})
 		) : (
 			<span>
 				<span role="img" aria-label="candle">
@@ -50,12 +59,7 @@ const Shows = ({ shows, upcoming, title }) => {
 				️
 			</span>
 		)
-	return (
-		<div className="showList">
-			<h3 className="showType">{title}</h3>
-			{showDisplay}
-		</div>
-	)
+	return <div className="showList">{showDisplay}</div>
 }
 
 Shows.propTypes = {
@@ -65,8 +69,7 @@ Shows.propTypes = {
 		location: PropTypes.string.isRequired,
 		otherActs: PropTypes.string.isRequired
 	}).isRequired,
-	upcoming: PropTypes.bool.isRequired,
-	title: PropTypes.string.isRequired
+	upcoming: PropTypes.bool.isRequired
 }
 
 export default Shows

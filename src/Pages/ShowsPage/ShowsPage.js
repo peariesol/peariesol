@@ -15,27 +15,27 @@ showList.forEach(show => {
 	}
 })
 
-const ShowsPage = () => {
-	return (
-		<div className="showsPage">
-			<div
-				style={{
-					backgroundImage: 'url("textures/heaven2.png")',
-					backgroundSize: 400
-				}}
-			>
-				<Shows shows={upcomingShows} upcoming={true} title="Upcoming Shows" />
-			</div>
-			<div
-				style={{
-					backgroundImage: 'url("textures/graveyard.jpg")',
-					backgroundSize: 550
-				}}
-			>
-				<Shows shows={previousShows} upcoming={false} title="Previous Shows" />
-			</div>
+const ShowsPage = () => (
+	<div className="showsPage">
+		<div
+			style={{
+				backgroundImage: 'url("textures/heaven2.png")',
+				backgroundSize: 400
+			}}
+		>
+			<h3 className="showType">Upcoming Shows</h3>
+			<Shows shows={upcomingShows} upcoming={true} />
 		</div>
-	)
-}
+		<div
+			style={{
+				backgroundImage: 'url("textures/graveyard.jpg")',
+				backgroundSize: 550
+			}}
+		>
+			<h3 className="showType">Previous Shows</h3>
+			<Shows shows={previousShows} upcoming={false} />
+		</div>
+	</div>
+)
 
 export default ShowsPage
