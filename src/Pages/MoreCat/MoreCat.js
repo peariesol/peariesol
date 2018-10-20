@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './MoreCat.css'
 
 class MoreCat extends Component {
 	render() {

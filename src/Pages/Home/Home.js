@@ -71,9 +71,7 @@ class Home extends Component {
 				className="home"
 				onMouseMove={this.trackMouse}
 				style={{
-					backgroundImage:
-						"url('textures/hauntedhouselightening-compress.gif')",
-					overflow: 'hidden'
+					backgroundImage: "url('textures/hauntedhouselightening-compress.gif')"
 				}}
 			>
 				<img

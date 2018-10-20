@@ -38,7 +38,7 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 				className={`centerImages mainImage ${
 					invertColors ? 'invertColors' : ''
 				}`}
-				src="self_photos/tape_art1-compress.jpg"
+				src="photos/tape_art1-compress.jpg"
 				alt="self"
 			/>
 			<img

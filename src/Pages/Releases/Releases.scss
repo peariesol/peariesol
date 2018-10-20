@@ -1,0 +1,65 @@
+.releasesPage {
+	width: 100%;
+	height: 100%;
+	background: yellow;
+	filter: saturate(80%) brightness(90%);
+	animation: vibrate 20s linear infinite;
+	animation-delay: 4s;
+	animation-play-state: playing;
+}
+
+.releasesPhotoBox {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.coolLink {
+	span {
+		color: ivory;
+		margin: 8px;
+	}
+}
+
+.coolLink:hover {
+	cursor: pointer;
+}
+
+@keyframes vibrate {
+	0% {
+		background: yellow;
+	}
+	10% {
+		background: darkblue;
+	}
+	20% {
+		background: darkcyan;
+	}
+	30% {
+		background: forestgreen;
+	}
+	40% {
+		background: purple;
+	}
+	50% {
+		background: maroon;
+	}
+	60% {
+		background: crimson;
+	}
+	70% {
+		background: orange;
+	}
+	80% {
+		background: lightsalmon;
+	}
+	90% {
+		background: papayawhip;
+	}
+	100% {
+		background: yellow;
+	}
+}
