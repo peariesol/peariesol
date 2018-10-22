@@ -17,7 +17,7 @@ const Releases = () => {
 		<div className="releasesPage">
 			<div className="releasesPhotoBox">
 				<span />
-				{iframe}
+				<div className="iframeBox">{iframe}</div>
 				<a
 					href="http://sisterpolygonrecords.bigcartel.com/"
 					className="coolLink"

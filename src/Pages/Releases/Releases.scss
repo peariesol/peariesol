@@ -1,10 +1,10 @@
 .releasesPage {
 	width: 100%;
 	height: 100%;
-	background: yellow;
-	filter: saturate(80%) brightness(90%);
-	animation: vibrate 20s linear infinite;
-	animation-delay: 4s;
+	background: radial-gradient(purple, yellow, violet, cyan);
+	// filter: saturate(80%) brightness(90%);
+	animation: vibrate 666s ease infinite;
+	animation-delay: 8s;
 	animation-play-state: playing;
 }
 
@@ -15,6 +15,12 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.iframeBox {
+	animation: skew 666s linear infinite;
+	animation-delay: 8s;
+	animation-play-state: playing;
 }
 
 .coolLink {
@@ -30,36 +36,25 @@
 
 @keyframes vibrate {
 	0% {
-		background: yellow;
 	}
-	10% {
-		background: darkblue;
-	}
-	20% {
-		background: darkcyan;
-	}
-	30% {
-		background: forestgreen;
-	}
-	40% {
-		background: purple;
-	}
+
 	50% {
-		background: maroon;
+		filter: saturate(9999%) blur(10px);
 	}
-	60% {
-		background: crimson;
-	}
-	70% {
-		background: orange;
-	}
-	80% {
-		background: lightsalmon;
-	}
-	90% {
-		background: papayawhip;
-	}
+
 	100% {
-		background: yellow;
+	}
+}
+
+@keyframes skew {
+	0% {
+	}
+
+	50% {
+		transform: rotate(180deg) scale(1.2, 1.2);
+	}
+
+	100% {
+		transform: rotate(360deg);
 	}
 }
