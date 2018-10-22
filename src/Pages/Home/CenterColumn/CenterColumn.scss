@@ -9,7 +9,8 @@
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	height: 80px;
+	height: 64px;
+	margin: -12px 0 0;
 }
 
 .eye {
@@ -17,7 +18,7 @@
 	display: block;
 	height: 64px;
 	font-size: 4em;
-	margin: 10px 0;
+	margin: 0;
 	padding: 0;
 	cursor: inherit;
 }

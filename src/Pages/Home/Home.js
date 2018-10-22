@@ -77,7 +77,7 @@ class Home extends Component {
 				<img
 					src="gifs/blood_drip.gif"
 					alt="blood drip"
-					style={{ width: '100vw', maxHeight: 30 }}
+					style={{ width: '100vw', maxHeight: 30, marginTop: -2 }}
 				/>
 				<div className="homeTop">
 					<div className="leftColumn sideColumn">
@@ -102,10 +102,20 @@ class Home extends Component {
 					</div>
 				</div>
 				<div className="homeBottom">
-					<img src="icons/signguestbook-compress.gif" alt="guest book" />
+					<img src="icons/signguestbook-compress.gif" alt="book" />
 					<img src="icons/fire420-compress.gif" alt="fire 420" />
-					<img src="icons/candle_book-compress.gif" alt="candle book" />
+					<img src="icons/signguestbook-compress.gif" alt="book" />
 				</div>
+				<img
+					src="gifs/blood_drip.gif"
+					alt="blood drip"
+					style={{
+						width: '100vw',
+						maxHeight: 30,
+						margin: 0,
+						transform: 'rotate(180deg)'
+					}}
+				/>
 				<Netscape
 					setNetscapeFollow={this.setNetscapeFollow}
 					netscapeFollow={netscapeFollow}

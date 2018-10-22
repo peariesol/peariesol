@@ -1,9 +1,12 @@
 .home {
 	background: black;
-	height: 100vh;
+	height: 100%;
 	position: relative;
 	background-size: 300px;
 	background-repeat: repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .home > span {
