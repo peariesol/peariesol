@@ -1,0 +1,44 @@
+[
+	{
+		"value": "washingtonPost",
+		"outlet": "Washington Post",
+		"text": "Washington Post",
+		"title": "Squirm the Night Away with Pearie Sol",
+		"link": "https://www.washingtonpost.com/goingoutguide/music/squirm-the-night-away-with-pearie-sol/2016/09/29/1f64c640-80e9-11e6-a52d-9a865a0ed0d4_story.html"
+	},
+	{
+		"value": "cityPaper",
+		"outlet": "City Paper",
+		"text": "City Paper",
+		"title": "One Track Mind",
+		"link": "http://www.washingtoncitypaper.com/arts/music/blog/20832962/one-track-mind-pearie-sol-alley"
+	},
+	{
+		"value": "cityPaperYear",
+		"outlet": "City Paper",
+		"text": "City Paper",
+		"title": "The Year in Weird",
+		"link": "http://www.washingtoncitypaper.com/arts/music/blog/20847383/the-year-in-weird"
+	},
+	{
+		"value": "sparkMag",
+		"outlet": "Spark Mag",
+		"text": "Spark Mag",
+		"title": "Pearie Sol Premieres Alley",
+		"link": "http://thesparkmag.com/artists/pearie-sol-premieres-alley/"
+	},
+	{
+		"value": "thisIsNotADrill",
+		"outlet": "This is not a Drill",
+		"text": "This is not a Drill",
+		"title": "Song of the Day",
+		"link": "https://tinadrill.com/2016/11/21/song-of-the-day-4-pearie-sol/"
+	},
+	{
+		"value": "btrToday",
+		"outlet": "BTR Today",
+		"text": "BTR Today",
+		"title": "Get Manic Over Pearie Sol",
+		"link": "http://www.btrtoday.com/read/musicmeetup/get-manic-over-pearie-sol/"
+	}
+]

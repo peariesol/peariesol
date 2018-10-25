@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Releases.css'
 
-class Releases extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			iframe: (
+const Releases = () => (
+	<div className="releasesPage">
+		<div className="releasesPhotoBox">
+			<span />
+			<div className="iframeBox">
 				<iframe
 					id="bandCampEmbed"
 					title="pearie sol s/t tape"
@@ -17,41 +17,12 @@ class Releases extends Component {
 						pearie sol by pearie sol
 					</a>
 				</iframe>
-			),
-			loaded: false
-		}
-	}
-
-	componentDidMount() {
-		!this.state.loaded &&
-			setInterval(() => {
-				if (!!document.getElementById('bandCampEmbed')) {
-					this.setState({
-						loaded: true
-					})
-				}
-			}, 100)
-	}
-
-	render() {
-		const { iframe, loaded } = this.state
-		console.log(iframe, loaded)
-		return (
-			<div className="releasesPage">
-				<div className="releasesPhotoBox">
-					<span />
-					{!loaded && <h2>Loading...</h2>}
-					<div className="iframeBox">{iframe}</div>
-					<a
-						href="http://sisterpolygonrecords.bigcartel.com/"
-						className="coolLink"
-					>
-						<span>Available on Sister Polygon Records</span>
-					</a>
-				</div>
 			</div>
-		)
-	}
-}
+			<a href="http://sisterpolygonrecords.bigcartel.com/" className="coolLink">
+				<span>Available on Sister Polygon Records</span>
+			</a>
+		</div>
+	</div>
+)
 
 export default Releases

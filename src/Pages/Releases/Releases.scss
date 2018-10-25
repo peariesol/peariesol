@@ -2,7 +2,6 @@
 	width: 100%;
 	height: 100%;
 	background: radial-gradient(purple, yellow, violet, cyan);
-	// filter: saturate(80%) brightness(90%);
 	animation: vibrate 666s ease infinite;
 	animation-delay: 8s;
 	animation-play-state: playing;
@@ -39,7 +38,7 @@
 	}
 
 	50% {
-		filter: saturate(9999%) blur(10px);
+		filter: saturate(9999%) blur(5px);
 	}
 
 	100% {

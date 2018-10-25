@@ -6,7 +6,7 @@ const expFont = (num, x) => Math.pow(num, x)
 
 const maxFont = 20
 
-const Shows = ({ shows, upcoming }) => {
+const Shows = ({ shows }) => {
 	const x = Math.log(maxFont) / Math.log(shows.length)
 	let count = shows.length
 	const showDisplay =
@@ -14,7 +14,7 @@ const Shows = ({ shows, upcoming }) => {
 			shows.map(({ date, venue, location, otherActs }, index) => {
 				index !== 0 && (count = count - 1)
 				return (
-					<ol>
+					<ol key={index}>
 						<li style={{ fontSize: expFont(count + 1, x) }}>
 							<ul>
 								<li>
@@ -63,12 +63,14 @@ const Shows = ({ shows, upcoming }) => {
 }
 
 Shows.propTypes = {
-	shows: PropTypes.arrayOf({
-		date: PropTypes.string.isRequired,
-		venue: PropTypes.string.isRequired,
-		location: PropTypes.string.isRequired,
-		otherActs: PropTypes.string.isRequired
-	}).isRequired,
+	shows: PropTypes.arrayOf(
+		PropTypes.shape({
+			date: PropTypes.string.isRequired,
+			venue: PropTypes.string.isRequired,
+			location: PropTypes.string.isRequired,
+			otherActs: PropTypes.string.isRequired
+		})
+	).isRequired,
 	upcoming: PropTypes.bool.isRequired
 }
 
