@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import { random } from 'lodash'
+import cursors from '../Utils/Cursors'
 import NavBar from '../components/NavBar/NavBar'
-import Title from '../components/Title/Title'
+import BouncingTitle from '../components/BouncingTitle/BouncingTitle'
 import './App.css'
-
-const cursors = ['fire', 'horse', 'skull', 'skull', 'snake_skin', 'snake_skull']
 
 class App extends Component {
 	constructor(props) {
@@ -24,7 +23,7 @@ class App extends Component {
 		return (
 			<div style={{ cursor: this.state.cursor }}>
 				<NavBar />
-				<Title randomCursor={this.randomCursor} />
+				<BouncingTitle randomCursor={this.randomCursor} />
 			</div>
 		)
 	}

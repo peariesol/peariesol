@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { colorNames } from '../../Utils/ColorNames'
 import PropTypes from 'prop-types'
 import { random } from 'lodash'
-import './Title.css'
+import './BouncingTitle.css'
 
-class Title extends Component {
+class BouncingTitle extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -35,18 +35,18 @@ class Title extends Component {
 		return (
 			<div
 				onMouseOver={this.props.randomCursor}
-				className="titleBox"
+				className="bouncingTitleBox"
 				onClick={this.handleClick}
 				style={{ background }}
 			>
-				<h2 className="title">Pearie Sol</h2>
+				<h2 className="bouncingTitle">Pearie Sol</h2>
 			</div>
 		)
 	}
 }
 
-Title.propTypes = {
+BouncingTitle.propTypes = {
 	randomCursor: PropTypes.func.isRequired
 }
 
-export default Title
+export default BouncingTitle

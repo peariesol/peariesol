@@ -1,4 +1,4 @@
-.titleBox {
+.bouncingTitleBox {
 	z-index: 2;
 	border-radius: 50%;
 	display: block;
@@ -12,7 +12,7 @@
 	animation-play-state: running;
 }
 
-.title {
+.bouncingTitle {
 	margin: 0;
 	padding: 24px 0 0;
 	font-size: 50px;
@@ -24,7 +24,7 @@
 
 @keyframes verticalMove {
 	0% {
-		top: 100px;
+		top: 10vh;
 	}
 	100% {
 		top: calc(100vh - 150px);

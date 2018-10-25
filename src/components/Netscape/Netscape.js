@@ -21,11 +21,16 @@ const Netscape = ({ setNetscapeFollow, netscapeFollow, mouseX, mouseY }) => (
 	/>
 )
 
+Netscape.defaultProps = {
+	mouseX: null,
+	mouseY: null
+}
+
 Netscape.propTypes = {
 	netscapeFollow: PropTypes.bool.isRequired,
 	setNetscapeFollow: PropTypes.func.isRequired,
-	mouseX: PropTypes.oneOfType([PropTypes.null, PropTypes.number]),
-	mouseY: PropTypes.oneOfType([PropTypes.null, PropTypes.number])
+	mouseX: PropTypes.number,
+	mouseY: PropTypes.number
 }
 
 export default Netscape

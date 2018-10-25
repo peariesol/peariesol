@@ -1,11 +1,11 @@
 import React from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
-import Home from '../../Pages/Home/Home'
-import Media from '../../Pages/Media/Media'
-import Info from '../../Pages/Info/Info'
-import Releases from '../../Pages/Releases/Releases'
-import Shows from '../../Pages/ShowsPage/ShowsPage'
-import MoreCat from '../../Pages/MoreCat/MoreCat'
+import Home from './Pages/Home/Home'
+import Media from './Pages/Media/Media'
+import Info from './Pages/Info/Info'
+import Releases from './Pages/Releases/Releases'
+import Shows from './Pages/ShowsPage/ShowsPage'
+import MoreCat from './Pages/MoreCat/MoreCat'
 
 const Routes = () => (
 	<Switch>
