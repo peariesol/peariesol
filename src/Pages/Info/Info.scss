@@ -1,9 +1,46 @@
-.pressQuoteContaienr {
-	border: 1px solid black;
+.pressContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
-.pressLinkContainer {
+.linksContainer,
+.quotesContainer {
+	width: 50%;
+}
+
+.pressLinks {
 	border: 1px dashed rosybrown;
+	background: green;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.pressLinkBox {
+	margin: 10px;
+	padding: 10px;
+	background: darkblue;
+	animation: colorChange 0.5s linear infinite;
+	animation-play-state: paused;
+}
+
+.pressLink {
+	display: inline;
+	padding: 10px;
+}
+
+.pressLinkBox:hover {
+	cursor: help;
+	animation-play-state: running;
+	p {
+		text-decoration: underline wavy;
+	}
+}
+
+.pressQuotes {
+	border: 1px solid black;
+	background: orange;
 }
 
 .pressQuoteBox {
@@ -11,15 +48,6 @@
 	background: lightyellow;
 }
 
-.pressLinkBox {
-	margin: 10px;
-	background: lightblue;
-}
-
 .pressQuote {
 	color: purple;
-}
-
-.pressLink {
-	color: crimson;
 }
