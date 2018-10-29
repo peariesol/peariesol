@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { random } from 'lodash'
 import cursors from '../Utils/Cursors'
 import NavBar from '../components/NavBar/NavBar'
@@ -22,11 +23,15 @@ class App extends Component {
 	render() {
 		return (
 			<div style={{ cursor: this.state.cursor }}>
-				<NavBar />
+				<NavBar location={this.props.location} />
 				<BouncingTitle randomCursor={this.randomCursor} />
 			</div>
 		)
 	}
+}
+
+App.propTypes = {
+	location: PropTypes.object.isRequired
 }
 
 export default App

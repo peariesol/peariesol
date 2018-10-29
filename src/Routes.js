@@ -6,6 +6,7 @@ import Info from './Pages/Info/Info'
 import Releases from './Pages/Releases/Releases'
 import Shows from './Pages/ShowsPage/ShowsPage'
 import MoreCat from './Pages/MoreCat/MoreCat'
+import FourOhFour from './Pages/FourOhFour/FourOhFour'
 
 const Routes = () => (
 	<Switch>
@@ -51,13 +52,31 @@ const Routes = () => (
 		/>
 		<Route
 			path="/"
+			exact
 			render={props => (
 				<div className="page">
 					<Home {...props} />
 				</div>
 			)}
 		/>
-		<Route path="/*" render={props => <Redirect to="/" {...props} />} />
+		<Route
+			render={props => (
+				<div className="page">
+					<FourOhFour {...props} />
+				</div>
+			)}
+			component={FourOhFour}
+		/>
+		{false && (
+			<Route
+				path="/*"
+				render={props => (
+					<div className="page">
+						<FourOhFour {...props} />
+					</div>
+				)}
+			/>
+		)}
 	</Switch>
 )
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { navLinks } from '../../Utils/NavLinks'
 import { colorNames } from '../../Utils/ColorNames'
 import { random } from 'lodash'
@@ -28,6 +29,12 @@ class NavBar extends Component {
 		}
 	}
 
+	componentDidUpdate(prevProps) {
+		if (prevProps.location.pathname !== this.props.location.pathname) {
+			this.randomizeBackground()
+		}
+	}
+
 	randomizeBackground = () => {
 		this.setState({
 			colors: {
@@ -39,6 +46,7 @@ class NavBar extends Component {
 	}
 
 	render() {
+		console.log(this.props)
 		const background = `linear-gradient(
             ${this.state.colors.a}, 
             ${this.state.colors.b}, 
@@ -48,11 +56,7 @@ class NavBar extends Component {
 			<React.Fragment>
 				<nav style={{ background }} className="navContainer">
 					{navLinks.map(link => (
-						<span
-							key={link.value}
-							className="navLink"
-							onMouseOver={this.randomizeBackground}
-						>
+						<span key={link.value} className="navLink">
 							<Link to={link.path}>
 								<p id={link.value} className="navText">
 									{link.text}
@@ -65,6 +69,10 @@ class NavBar extends Component {
 			</React.Fragment>
 		)
 	}
+}
+
+NavBar.propTypes = {
+	location: PropTypes.object.isRequired
 }
 
 export default NavBar

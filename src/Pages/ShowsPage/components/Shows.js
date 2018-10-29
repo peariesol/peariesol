@@ -70,8 +70,7 @@ Shows.propTypes = {
 			location: PropTypes.string.isRequired,
 			otherActs: PropTypes.string.isRequired
 		})
-	).isRequired,
-	upcoming: PropTypes.bool.isRequired
+	).isRequired
 }
 
 export default Shows
