@@ -24,15 +24,34 @@ const Info = () => {
 	return (
 		<div className="infoPage">
 			<div className="contactInfo">
-				<h2>contact info</h2>
-
-				<a
-					style={{ color: 'red' }}
-					href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
-					target="_top"
-				>
-					Email Me
-				</a>
+				<span>
+					For booking, shows and general info,
+					<a
+						className="contactInfoEmail"
+						href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+						target="_top"
+					>
+						Email Me
+					</a>
+					!
+				</span>
+				<div className="horseGifs">
+					<img src="gifs/computers_email.gif" alt="computers email" />
+					<img src="gifs/email_butterfly.gif" alt="computers email" />
+					<img src="gifs/email.gif" alt="computers email" />
+					<img src="gifs/horse_email_2.gif" alt="horse gif 1" />
+					<img src="gifs/horse_email_me.gif" alt="horse gif 2" />
+					<img src="gifs/horse_email.gif" alt="horse gif 3" />
+					<img src="gifs/horse_email3.gif" alt="horse gif 4" />
+					<img src="gifs/horse_head.gif" alt="horse gif 5" />
+					<img src="gifs/horse_vote.gif" alt="horse gif 6" />
+					<img src="gifs/horsetopsitevote.gif" alt="horse gif 7" />
+					<img src="gifs/horse_head.gif" alt="horse gif 8" />
+					<img
+						src="gifs/horse_run.gif"
+						alt="horse gif 9, yep, 9 horse gifs on this page"
+					/>
+				</div>
 			</div>
 			<div className="pressContainer">
 				<div className="linksContainer">
@@ -40,9 +59,12 @@ const Info = () => {
 					<div className="pressLinks">{pressLinks}</div>
 				</div>
 				<div className="quotesContainer">
-					<h2 className="quotesHeading">Quotes</h2>
+					<h2 className="quotesHeading">Lets see what folks are saying!</h2>
 					<div className="pressQuotes">{pressQuotes}</div>
 				</div>
+			</div>
+			<div className="hotLinks">
+				<img src="gifs/hotLinks.gif" alt="hot links" />
 			</div>
 		</div>
 	)

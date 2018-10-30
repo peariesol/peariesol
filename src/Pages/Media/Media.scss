@@ -1,19 +1,30 @@
 .mediaPage {
 	overflow-y: scroll;
 	height: 90vh;
-	background: black;
+	background: linear-gradient(to right, #9894b8, #49acaf, #9894b8);
 }
 
 .mediaPhoto {
 	max-height: 300px;
 	margin: 4px;
+	box-shadow: black 2px 2px 6px;
+	transition: linear;
+	transition-duration: 1s;
 }
 
 .mediaPhoto:hover {
 	cursor: help;
-	border: 1px maroon solid;
+	// border: 1px maroon solid;
 	box-sizing: border-box;
-	filter: brightness(110%);
+	filter: invert(100%) brightness(130%);
+	transition: ease-in;
+	transition-duration: 8s;
+}
+
+.mediaHeading {
+	font-family: cursive;
+	color: lime;
+	text-align: center;
 }
 
 .videoBox {
