@@ -24,7 +24,7 @@ const ShowsPage = () => (
 			}}
 		>
 			<h3 className="showType">Upcoming Shows</h3>
-			<Shows shows={upcomingShows} />
+			<Shows shows={upcomingShows} upcoming={true} />
 		</div>
 		<div
 			style={{
@@ -33,7 +33,7 @@ const ShowsPage = () => (
 			}}
 		>
 			<h3 className="showType">Previous Shows</h3>
-			<Shows shows={previousShows} />
+			<Shows shows={previousShows} upcoming={false} />
 		</div>
 	</div>
 )

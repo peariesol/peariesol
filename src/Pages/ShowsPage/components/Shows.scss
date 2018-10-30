@@ -6,3 +6,12 @@
 .showListItemRow {
 	background: linear-gradient(palevioletred, steelblue, forestgreen);
 }
+
+.showListLink {
+	color: lightgreen;
+}
+
+.showListLink:hover {
+	cursor: help;
+	color: lightskyblue;
+}

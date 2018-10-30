@@ -9,8 +9,8 @@ const FourOhFour = () => (
 				Zowie! you've stumbled into my super secret page!
 			</p>
 			<p className="FourOhFourText">
-				Please email me your credit card number to receive your special secret
-				prize!
+				Please email me your credit card number to receive your secret special
+				secret prize!
 			</p>
 		</div>
 		<img src="gifs/cow_boy_computer.gif" />

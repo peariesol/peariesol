@@ -2,16 +2,20 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './Shows.css'
 
-const expFont = (num, x) => Math.pow(num, x)
+const expFont = (num, x) => {
+	console.log(Math.pow(num, x))
+	return Math.pow(num, x)
+}
 
 const maxFont = 20
 
-const Shows = ({ shows }) => {
-	const x = Math.log(maxFont) / Math.log(shows.length)
-	let count = shows.length
+const Shows = ({ shows, upcoming }) => {
+	const x = !upcoming ? Math.log(maxFont) / Math.log(shows.length) : 1
+	console.log(upcoming, x)
+	let count = !upcoming ? shows.length : maxFont
 	const showDisplay =
 		shows.length >= 1 ? (
-			shows.map(({ date, venue, location, otherActs }, index) => {
+			shows.map(({ date, venue, location, otherActs, link }, index) => {
 				index !== 0 && (count = count - 1)
 				return (
 					<ol key={index}>
@@ -41,6 +45,13 @@ const Shows = ({ shows }) => {
 										{otherActs}
 									</span>
 								</li>
+								{link && (
+									<li>
+										<span className="showListItemRow showListLink">
+											<a href={`${link}`}>{link}</a>
+										</span>
+									</li>
+								)}
 							</ul>
 						</li>
 						<br />
@@ -70,7 +81,8 @@ Shows.propTypes = {
 			location: PropTypes.string.isRequired,
 			otherActs: PropTypes.string.isRequired
 		})
-	).isRequired
+	).isRequired,
+	upcoming: PropTypes.bool.isRequired
 }
 
 export default Shows

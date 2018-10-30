@@ -1,0 +1,32 @@
+.mediaPage {
+	overflow-y: scroll;
+	height: 90vh;
+	background: black;
+}
+
+.mediaPhoto {
+	max-height: 300px;
+	margin: 4px;
+}
+
+.mediaPhoto:hover {
+	cursor: help;
+	border: 1px maroon solid;
+	box-sizing: border-box;
+	filter: brightness(110%);
+}
+
+.videoBox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageGallery {
+	margin: 20px auto;
+	width: 60vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
