@@ -23,34 +23,67 @@ const pressQuotes = quotes.map(({ value, quote, outlet }) => (
 const Info = () => {
 	return (
 		<div className="infoPage">
-			<div className="contactInfo">
-				<span>
-					For booking, shows and general info,
+			<div className="infoTop">
+				<div className="topRow">
+					<img
+						src="gifs/horse_head.gif"
+						alt="horse head"
+						width="60"
+						height="60"
+					/>
+					<span />
+					<img
+						src="gifs/horse_head.gif"
+						alt="horse head"
+						width="60"
+						height="60"
+					/>
+				</div>
+				{false && (
+					<div className="contactInfo">
+						<span className="emailSpan">
+							{`For booking, shows and general info `}
+							<a
+								className="contactInfoEmail"
+								href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+								target="_top"
+							>
+								Email Me
+							</a>
+							!
+						</span>
+					</div>
+				)}
+				<div className="horseGifs">
 					<a
 						className="contactInfoEmail"
 						href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
 						target="_top"
 					>
-						Email Me
+						<img src="gifs/horse_email_me.gif" alt="horse gif 2" />
 					</a>
-					!
-				</span>
-				<div className="horseGifs">
-					<img src="gifs/computers_email.gif" alt="computers email" />
-					<img src="gifs/email_butterfly.gif" alt="computers email" />
-					<img src="gifs/email.gif" alt="computers email" />
-					<img src="gifs/horse_email_2.gif" alt="horse gif 1" />
-					<img src="gifs/horse_email_me.gif" alt="horse gif 2" />
-					<img src="gifs/horse_email.gif" alt="horse gif 3" />
-					<img src="gifs/horse_email3.gif" alt="horse gif 4" />
-					<img src="gifs/horse_head.gif" alt="horse gif 5" />
-					<img src="gifs/horse_vote.gif" alt="horse gif 6" />
+					<span className="emailSpan">
+						{`For booking, shows and general info `}
+						<a
+							className="contactInfoEmail"
+							href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+							target="_top"
+						>
+							Email Me
+						</a>
+						!
+					</span>
+					<a
+						className="contactInfoEmail"
+						href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+						target="_top"
+					>
+						<img src="gifs/horse_email.gif" alt="horse gif 3" />
+					</a>
+				</div>
+				<div className="horseVote">
 					<img src="gifs/horsetopsitevote.gif" alt="horse gif 7" />
-					<img src="gifs/horse_head.gif" alt="horse gif 8" />
-					<img
-						src="gifs/horse_run.gif"
-						alt="horse gif 9, yep, 9 horse gifs on this page"
-					/>
+					<img src="gifs/horse_vote.gif" alt="horse gif 6" />
 				</div>
 			</div>
 			<div className="pressContainer">

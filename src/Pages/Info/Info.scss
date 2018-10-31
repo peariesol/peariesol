@@ -52,18 +52,36 @@
 	color: purple;
 }
 
-.contactInfo {
-	margin: 12px 0 0;
+.topRow {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+}
+
+.infoTop {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contactInfo {
+	margin: 0;
+	font-size: 20px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 	align-items: center;
 }
 
 .horseGifs {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+	flex-wrap: no-wrap;
 	justify-content: space-around;
 	img {
 		height: 80px;
@@ -71,13 +89,13 @@
 }
 
 .contactInfoEmail {
-	color: maroon;
-	transition-duration: 1s;
+	color: crimson;
+	transition-duration: 0.5s;
 }
 
 .contactInfoEmail:hover {
 	cursor: help;
-	color: crimson;
-	transition: ease-in;
-	transition-duration: 1s;
+	color: violet;
+	transition: linear;
+	transition-duration: 0.5s;
 }
