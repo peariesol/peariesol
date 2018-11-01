@@ -1,36 +1,40 @@
-.pressContainer {
+.infoPage {
+	height: 100%;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
+	background: black;
 }
 
-.linksContainer,
-.quotesContainer {
-	width: 50%;
+.pressContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 60vw;
+}
+
+.pressLinkContainer {
+	border: 1px dashed rosybrown;
+	background: green;
 }
 
 .pressLinks {
-	border: 1px dashed rosybrown;
-	background: green;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-.pressLinkBox {
-	margin: 10px;
-	padding: 10px;
-	background: darkblue;
-	animation: colorChange 0.5s linear infinite;
-	animation-play-state: paused;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .pressLink {
-	display: inline;
-	padding: 10px;
+	margin: 6px;
+	padding: 8px;
+	background: darkblue;
+	animation: colorChange 0.5s linear infinite;
+	animation-play-state: paused;
+	display: inline-block;
 }
 
-.pressLinkBox:hover {
+.pressLink:hover {
 	cursor: help;
 	animation-play-state: running;
 	p {
@@ -38,22 +42,34 @@
 	}
 }
 
-.pressQuotes {
+.pressQuoteContainer {
 	border: 1px solid black;
 	background: orange;
 }
 
-.pressQuoteBox {
-	margin: 10px;
-	background: lightyellow;
+.pressQuotes {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .pressQuote {
+	font-size: 0.8em;
+	font-family: cursive;
+	padding: 4px;
+	margin: 8px;
+	background: lightyellow;
 	color: purple;
+	display: inline-block;
+}
+
+.pressHeading {
+	margin: 4px;
 }
 
 .topRow {
-	margin: 0;
+	margin: 20px 0 0;
 	padding: 0;
 	width: 100vw;
 	display: flex;
@@ -61,41 +77,119 @@
 	flex-direction: row;
 }
 
-.infoTop {
+.infoPageTop {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.contactInfo {
-	margin: 0;
-	font-size: 20px;
-	width: 100%;
+.infoPageBottom {
+	flex-grow: 2;
+	height: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
+	margin-top: 100px;
 }
 
-.horseGifs {
+.bottomRow {
+	height: 100%;
+}
+
+.contactInfo {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: no-wrap;
-	justify-content: space-around;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
 	img {
 		height: 80px;
 	}
 }
 
+.emailSpan {
+	margin: 0 12px;
+	.contactInfoEmail {
+		border: 2px dashed lime;
+		padding: 8px;
+	}
+}
+
 .contactInfoEmail {
-	color: crimson;
+	background: #771177dd;
+	font-size: 1.5em;
 	transition-duration: 0.5s;
+	animation: colorChange 0.5s linear infinite;
+	animation-play-state: paused;
 }
 
 .contactInfoEmail:hover {
-	cursor: help;
-	color: violet;
 	transition: linear;
 	transition-duration: 0.5s;
+	animation-play-state: running;
+	text-decoration: underline wavy;
+	cursor: help;
+}
+
+.horseVoteBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.horseVote {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	img {
+		margin: 0 6px;
+	}
+}
+
+.horseVoteTitle {
+	color: red;
+	margin: 6px 0 4px;
+}
+
+.hotLinks {
+	width: 40vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hotLink {
+	padding: 0;
+	animation: colorChange 0.5s linear infinite;
+	animation-play-state: paused;
+	background: purple;
+	border-radius: 3px;
+	margin: 4px;
+	padding: 4px;
+	p {
+		animation: linkTwerk 2s linear infinite alternate;
+		animation-play-state: running;
+	}
+}
+
+.hotLink:hover {
+	animation-play-state: running;
+	text-decoration: underline wavy;
+	cursor: help;
+}
+
+@keyframes linkTwerk {
+	0% {
+		font-size: 1em;
+	}
+	100% {
+		font-size: 1.4em;
+		transform: rotate(5deg);
+	}
 }

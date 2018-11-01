@@ -4,26 +4,24 @@ import quotes from '../../Utils/PressQuotes'
 import './Info.css'
 
 const pressLinks = links.map(({ value, text, link }) => (
-	<span key={value} className="pressLinkBox">
-		<a href={link}>
-			<p className="pressLink">{text}</p>
-		</a>
-	</span>
+	<a href={link}>
+		<p key={value} className="pressLink">
+			{text}
+		</p>
+	</a>
 ))
 
 const pressQuotes = quotes.map(({ value, quote, outlet }) => (
-	<span key={value} className="pressQuoteBox">
-		<p className="pressQuote">
-			<em>{`"${quote}"`}</em>
-			{` - ${outlet}`}
-		</p>
-	</span>
+	<p key={value} className="pressQuote">
+		<em>{`"${quote}"`}</em>
+		{` - ${outlet}`}
+	</p>
 ))
 
 const Info = () => {
 	return (
 		<div className="infoPage">
-			<div className="infoTop">
+			<div className="infoPageTop">
 				<div className="topRow">
 					<img
 						src="gifs/horse_head.gif"
@@ -31,7 +29,35 @@ const Info = () => {
 						width="60"
 						height="60"
 					/>
-					<span />
+					<div className="contactInfo">
+						<a
+							className="contactInfoEmail"
+							href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+							target="_top"
+						>
+							<img
+								src="gifs/horse_email_me.gif"
+								alt="horse gif 2"
+								width="120"
+							/>
+						</a>
+						<span className="emailSpan">
+							<a
+								className="contactInfoEmail"
+								href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+								target="_top"
+							>
+								Email Me!!
+							</a>
+						</span>
+						<a
+							className="contactInfoEmail"
+							href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
+							target="_top"
+						>
+							<img src="gifs/horse_email.gif" alt="horse gif 3" width="120" />
+						</a>
+					</div>
 					<img
 						src="gifs/horse_head.gif"
 						alt="horse head"
@@ -39,65 +65,48 @@ const Info = () => {
 						height="60"
 					/>
 				</div>
-				{false && (
-					<div className="contactInfo">
-						<span className="emailSpan">
-							{`For booking, shows and general info `}
-							<a
-								className="contactInfoEmail"
-								href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
-								target="_top"
-							>
-								Email Me
-							</a>
-							!
-						</span>
+			</div>
+			<div className="infoPageBottom">
+				<div className="pressContainer bottomRow">
+					<div className="pressQuoteContainer">
+						<h2 className="pressHeading">Lets hear what folks are saying!</h2>
+						<div className="pressQuotes">{pressQuotes}</div>
 					</div>
-				)}
-				<div className="horseGifs">
+
+					<div className="pressLinkContainer">
+						<h2 className="pressHeading">Straight from the horse's mouth!</h2>
+						<div className="pressLinks">{pressLinks}</div>
+					</div>
+				</div>
+				<div className="hotLinks bottomRow">
+					<img src="gifs/hotLinks.gif" alt="hot links" width="200" />
 					<a
-						className="contactInfoEmail"
-						href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
-						target="_top"
+						href="https://g-a-u-c-h-e.bandcamp.com/releases"
+						className="hotLink"
 					>
-						<img src="gifs/horse_email_me.gif" alt="horse gif 2" />
+						<p>Gauche</p>
 					</a>
-					<span className="emailSpan">
-						{`For booking, shows and general info `}
-						<a
-							className="contactInfoEmail"
-							href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
-							target="_top"
-						>
-							Email Me
-						</a>
-						!
-					</span>
+					<a href="https://teenliver.bandcamp.com/" className="hotLink">
+						<p>Teen Liver</p>
+					</a>
 					<a
-						className="contactInfoEmail"
-						href="mailto:solpearie@gmail.com?Subject=Hello%20Dolly"
-						target="_top"
+						href="https://sisterpolygonrecords.bigcartel.com/"
+						className="hotLink"
 					>
-						<img src="gifs/horse_email.gif" alt="horse gif 3" />
+						<p>Sister Polygon Records</p>
 					</a>
+					<div className="horseVoteBox">
+						<h3 className="horseVoteTitle">Dont forget to vote!</h3>
+						<div className="horseVote">
+							<img
+								src="gifs/horsetopsitevote.gif"
+								alt="horse gif 7"
+								height="60"
+							/>
+							<img src="gifs/horse_vote.gif" alt="horse gif 6" height="60" />
+						</div>
+					</div>
 				</div>
-				<div className="horseVote">
-					<img src="gifs/horsetopsitevote.gif" alt="horse gif 7" />
-					<img src="gifs/horse_vote.gif" alt="horse gif 6" />
-				</div>
-			</div>
-			<div className="pressContainer">
-				<div className="linksContainer">
-					<h2 className="linksHeading">Press</h2>
-					<div className="pressLinks">{pressLinks}</div>
-				</div>
-				<div className="quotesContainer">
-					<h2 className="quotesHeading">Lets see what folks are saying!</h2>
-					<div className="pressQuotes">{pressQuotes}</div>
-				</div>
-			</div>
-			<div className="hotLinks">
-				<img src="gifs/hotLinks.gif" alt="hot links" />
 			</div>
 		</div>
 	)
