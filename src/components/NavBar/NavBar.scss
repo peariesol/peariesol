@@ -30,7 +30,7 @@ a {
 	height: 24px;
 	color: lightgreen;
 	font-size: 20px;
-	animation: colorChange 1s linear infinite;
+	animation: colorChange 1s linear infinite forwards;
 	animation-play-state: paused;
 }
 
@@ -102,6 +102,6 @@ a {
 		color: lightskyblue;
 	}
 	100% {
-		color: seagreen;
+		color: lightgreen;
 	}
 }
