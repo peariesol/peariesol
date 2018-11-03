@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Redirect, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import Home from './Pages/Home/Home'
 import Media from './Pages/Media/Media'
 import Info from './Pages/Info/Info'

@@ -19,11 +19,15 @@ class Releases extends Component {
 					<div className="iframeBox">
 						{!this.state.loaded && <div className="loader">Loading...</div>}
 						<iframe
-							style={{ display: this.state.loaded ? 'initial' : 'none' }}
+							style={{
+								display: this.state.loaded ? 'initial' : 'none',
+								border: 0,
+								width: 300,
+								height: 300
+							}}
 							onLoad={this.setLoaded}
 							id="bandCampEmbed"
 							title="pearie sol s/t tape"
-							style={{ border: 0, width: 300, height: 300 }}
 							src="https://bandcamp.com/EmbeddedPlayer/album=797557584/size=large/bgcol=333333/linkcol=20B2AA/minimal=true/transparent=true/"
 							seamless
 						>

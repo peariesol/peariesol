@@ -27,6 +27,7 @@ class Media extends Component {
 							frameBorder="1"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
+							title="alley video"
 						/>
 					</div>
 				</div>

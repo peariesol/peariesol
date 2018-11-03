@@ -7,14 +7,6 @@ import { Link } from 'react-router-dom'
 import Routes from '../../Routes'
 import './NavBar.css'
 
-// other option :
-// a:
-// "OldLace"
-// b:
-// "Black"
-// c:
-// "Crimson"
-
 class NavBar extends Component {
 	constructor(props) {
 		super(props)
@@ -46,7 +38,6 @@ class NavBar extends Component {
 	}
 
 	render() {
-		console.log(this.props)
 		const background = `linear-gradient(
             ${this.state.colors.a}, 
             ${this.state.colors.b}, 
@@ -56,7 +47,10 @@ class NavBar extends Component {
 			<React.Fragment>
 				<nav style={{ background }} className="navContainer">
 					{navLinks.map(link => (
-						<span key={link.value} className="navLink">
+						<span
+							key={link.value}
+							className={`navLink ${link.value !== 'moreCat' && 'normalNav'}`}
+						>
 							<Link to={link.path}>
 								<p id={link.value} className="navText">
 									{link.text}

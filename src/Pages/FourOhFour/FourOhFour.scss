@@ -3,7 +3,6 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	// background: green;
 	background: linear-gradient(green, purple);
 	height: 100vh;
 }
@@ -18,26 +17,14 @@
 }
 
 .FourOhFourTextBox {
-	animation: grow 1s linear infinite alternate;
-	animation-play-state: play;
+	width: 60vw;
 }
 
 .FourOhFourText {
-	color: hotpink;
-	background: red;
+	color: lime;
+	background: teal;
 	text-align: center;
-	white-space: nowrap;
 	margin: 20px;
 	padding: 6px;
 	border-radius: 2px;
-}
-
-@keyframes grow {
-	0% {
-		font-size: 1.2rem;
-	}
-
-	100% {
-		font-size: 1.4rem;
-	}
 }

@@ -1,0 +1,65 @@
+.moreCatPage {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	background: linear-gradient(
+		to right,
+		limegreen,
+		steelblue,
+		limegreen,
+		steelblue,
+		limegreen,
+		steelblue
+	);
+	height: 100vh;
+}
+
+.moreCatTitle {
+	background: yellowgreen;
+	color: rosybrown;
+	border: 4px dashed red;
+	margin-top: 40px;
+	padding: 6px;
+	border-radius: 2px;
+}
+
+.moreCatTextBox {
+	animation: grow 1s linear infinite alternate;
+	animation-play-state: play;
+}
+
+.moreCatText {
+	color: hotpink;
+	background: red;
+	text-align: center;
+	margin: 20px;
+	padding: 6px;
+	border-radius: 8px;
+	box-shadow: black 10px 5px 5px;
+}
+
+.moreCats {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.invisibleCat {
+	visibility: hidden;
+}
+
+.visibleCat {
+	visibility: visible !important;
+}
+
+@keyframes grow {
+	0% {
+		font-size: 1.2rem;
+	}
+
+	100% {
+		font-size: 1.4rem;
+	}
+}
