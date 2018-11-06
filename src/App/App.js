@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { random } from 'lodash'
 import cursors from '../Utils/Cursors'
-import NavBar from '../components/NavBar/NavBar'
-import BouncingTitle from '../components/BouncingTitle/BouncingTitle'
+import NavBar from '../Components/NavBar/NavBar'
+import BouncingTitle from '../Components/BouncingTitle/BouncingTitle'
 import './App.css'
 
 class App extends Component {

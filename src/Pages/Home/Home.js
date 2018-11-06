@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import CenterColumn from './CenterColumn/CenterColumn'
-import Netscape from '../../components/Netscape/Netscape'
+import Netscape from '../../Components/Netscape/Netscape'
 import './Home.css'
 
 let timer = null

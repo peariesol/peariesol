@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment'
-import Shows from './components/Shows'
+import Shows from './Components/Shows'
 import showList from '../../Utils/ShowList'
 import './ShowsPage.css'
 
