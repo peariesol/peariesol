@@ -80,31 +80,27 @@ class Home extends Component {
 					style={{ width: '100vw', maxHeight: 30, marginTop: -2 }}
 				/>
 				<div className="homeTop">
-					<div className="leftColumn sideColumn">
-						<img
-							className="cat"
-							src="images/cat-compress.gif"
-							alt="cat walk"
-							onClick={this.setInvertColors}
-						/>
-					</div>
+					<img
+						className="cat"
+						src="images/cat-compress.gif"
+						alt="cat walk"
+						onClick={this.setInvertColors}
+					/>
+
 					<CenterColumn
 						eyeBlink={eyeBlink}
 						invertColors={invertColors}
 						setInvertColors={this.setInvertColors}
 					/>
-					<div className="rightColumn sideColumn">
-						<img
-							className="catRight cat"
-							src="images/cat-compress.gif"
-							alt="cat walk"
-						/>
-					</div>
+
+					<img
+						className="catRight cat"
+						src="images/cat-compress.gif"
+						alt="cat walk"
+					/>
 				</div>
 				<div className="homeBottom">
-					<img src="icons/signguestbook-compress.gif" alt="book" />
-					<img src="icons/fire420-compress.gif" alt="fire 420" />
-					<img src="icons/signguestbook-compress.gif" alt="book" />
+					<img src="icons/lightening_break-compress.gif" alt="lightening" />
 				</div>
 				<img
 					src="gifs/blood_drip.gif"

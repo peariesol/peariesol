@@ -1,11 +1,15 @@
+$titleRadius: 120px;
+$bottom: calc(100vh - 120px);
+$right: calc(100vw - 120px);
+
 .bouncingTitleBox {
 	z-index: 2;
 	border-radius: 50%;
 	display: block;
 	margin: 0 auto;
 	padding: 0;
-	width: 80px;
-	height: 80px;
+	width: $titleRadius;
+	height: $titleRadius;
 	position: absolute;
 	animation: horizontalMove 8s linear infinite alternate,
 		verticalMove 5s linear infinite alternate;
@@ -15,9 +19,9 @@
 .bouncingTitle {
 	margin: 0;
 	padding: 24px 0 0;
-	font-size: 50px;
-	line-height: 60px;
-	max-height: 150px;
+	font-size: $titleRadius/3;
+	line-height: $titleRadius/3;
+	max-height: 80px;
 	font-family: 'Pinyon Script', cursive;
 	text-align: center;
 }
@@ -27,7 +31,7 @@
 		top: 10vh;
 	}
 	100% {
-		top: calc(100vh - 150px);
+		top: $bottom;
 	}
 }
 
@@ -36,6 +40,6 @@
 		left: 0;
 	}
 	100% {
-		left: calc(100vw - 150px);
+		left: $right;
 	}
 }

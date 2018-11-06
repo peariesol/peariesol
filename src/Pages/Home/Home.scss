@@ -23,12 +23,13 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 	height: 40px;
 }
 
 .cat {
-	width: 200px;
-	height: 200px;
+	width: 150px;
+	height: 150px;
 }
 
 .cat:hover {

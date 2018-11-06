@@ -1,4 +1,5 @@
 .centerColumn {
+	width: 580px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -75,9 +76,10 @@
 }
 
 .mainImageTitle {
+	// mask: url('/textures/bricks.jpg');
 	margin: 0;
 	font-size: 36px;
-	color: red;
+	color: rgb(255, 34, 0);
 	font-family: 'Nosifer', cursive;
 	font-weight: bold;
 }

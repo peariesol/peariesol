@@ -24,9 +24,17 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 			/>
 		</div>
 		<div className="mainTitleBox">
-			<img src="icons/horsewalk-compress-transparent.gif" alt="horse" />
+			<img
+				src="icons/horsewalk-compress-transparent.gif"
+				alt="horse"
+				height="80"
+			/>
 			<p className={`mainImageTitle font-effect-fire-animation`}>Pearie Sol</p>
-			<img src="icons/horsewalk-compress-transparent.gif" alt="horse" />
+			<img
+				src="icons/horsewalk-compress-transparent.gif"
+				alt="horse"
+				height="80"
+			/>
 		</div>
 		<div className="mainImageBox">
 			<div
@@ -52,7 +60,6 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 				alt="tiki fire"
 			/>
 		</div>
-		<img src="icons/lightening_break-compress.gif" alt="lightening" />
 	</div>
 )
 
