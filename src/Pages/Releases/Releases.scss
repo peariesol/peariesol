@@ -23,6 +23,8 @@
 }
 
 .loader {
+	position: relative;
+	top: 150px;
 	text-align: center;
 	font-style: italic;
 	font-size: 1.3rem;
@@ -36,7 +38,7 @@
 }
 
 .coolLink:hover {
-	cursor: pointer;
+	cursor: help;
 }
 
 @keyframes vibrate {

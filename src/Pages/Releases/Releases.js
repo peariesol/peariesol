@@ -12,6 +12,7 @@ class Releases extends Component {
 	setLoaded = () => this.setState({ loaded: true })
 
 	render() {
+		console.log(this.state.loaded)
 		return (
 			<div className="releasesPage">
 				<div className="releasesPhotoBox">
@@ -20,7 +21,7 @@ class Releases extends Component {
 						{!this.state.loaded && <div className="loader">Loading...</div>}
 						<iframe
 							style={{
-								display: this.state.loaded ? 'initial' : 'none',
+								visibility: this.state.loaded ? 'visible' : 'hidden',
 								border: 0,
 								width: 300,
 								height: 300

@@ -1,25 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { reverse } from 'lodash'
 import './Shows.css'
 
-const expFont = (num, x) => {
-	console.log(Math.pow(num, x))
-	return Math.pow(num, x)
-}
-
 const maxFont = 20
+const expFont = (num, x) => Math.pow(num, x)
 
 const Shows = ({ shows, upcoming }) => {
 	const x = !upcoming ? Math.log(maxFont) / Math.log(shows.length) : 1
-	console.log(upcoming, x)
+	const showsArray = upcoming ? reverse(shows) : shows
 	let count = !upcoming ? shows.length : maxFont
 	const showDisplay =
 		shows.length >= 1 ? (
-			shows.map(({ date, venue, location, otherActs, link }, index) => {
+			showsArray.map(({ date, venue, location, otherActs, link }, index) => {
 				index !== 0 && (count = count - 1)
 				return (
 					<ol key={index}>
-						<li style={{ fontSize: expFont(count + 1, x) }}>
+						<li
+							className="showListBox"
+							style={{ fontSize: expFont(count + 1, x) }}
+						>
 							<ul>
 								<li>
 									<span className="showListItemRow">

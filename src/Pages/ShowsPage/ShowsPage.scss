@@ -11,6 +11,23 @@
 
 .showType {
 	text-align: center;
-	margin: auto;
-	color: red;
+	padding: 8px;
+	margin: 8px auto;
+	font-size: 2em;
+	font-family: cursive;
+	display: inline-block;
+	border-radius: 8px;
+	box-shadow: 1px 1px 10px black;
+}
+
+.upcomingHeading {
+	background: #d93;
+	color: whitesmoke;
+	border: 2px solid #b71;
+}
+
+.previousHeading {
+	background: black;
+	color: whitesmoke;
+	border: 2px solid #111;
 }

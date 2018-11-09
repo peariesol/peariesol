@@ -20,19 +20,21 @@ const ShowsPage = () => (
 		<div
 			style={{
 				backgroundImage: 'url("textures/heaven2.png")',
-				backgroundSize: 400
+				backgroundSize: 400,
+				textAlign: 'center'
 			}}
 		>
-			<h3 className="showType">Upcoming Shows</h3>
+			<h3 className="showType upcomingHeading">☀️ Upcoming Shows ☀️</h3>
 			<Shows shows={upcomingShows} upcoming={true} />
 		</div>
 		<div
 			style={{
 				backgroundImage: 'url("textures/graveyard.jpg")',
-				backgroundSize: 550
+				backgroundSize: 550,
+				textAlign: 'center'
 			}}
 		>
-			<h3 className="showType">Previous Shows</h3>
+			<h3 className="showType previousHeading">🌙 Previous Shows 🌙</h3>
 			<Shows shows={previousShows} upcoming={false} />
 		</div>
 	</div>
