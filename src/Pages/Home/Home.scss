@@ -36,8 +36,13 @@
 	position: relative;
 }
 
-.catRight {
+.imgHorizontalFlip {
 	transform: scaleX(-1);
+}
+
+.bloodDrip {
+	width: 100vw;
+	max-height: 30px;
 }
 
 .devilFire {

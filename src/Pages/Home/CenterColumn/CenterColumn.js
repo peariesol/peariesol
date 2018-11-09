@@ -25,15 +25,16 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 		</div>
 		<div className="mainTitleBox">
 			<img
+				className="imgHorizontalFlip"
 				src="icons/horsewalk-compress-transparent.gif"
 				alt="horse"
-				height="80"
+				height="60"
 			/>
 			<p className={`mainImageTitle font-effect-fire-animation`}>Pearie Sol</p>
 			<img
 				src="icons/horsewalk-compress-transparent.gif"
 				alt="horse"
-				height="80"
+				height="60"
 			/>
 		</div>
 		<div className="mainImageBox">

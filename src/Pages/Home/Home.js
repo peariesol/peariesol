@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import CenterColumn from './CenterColumn/CenterColumn'
 import Netscape from '../../Components/Netscape/Netscape'
+import Alert from './Alert/Alert'
 import './Home.css'
 
 let timer = null
@@ -28,9 +29,9 @@ class Home extends Component {
 
 	randomize() {
 		timer = setTimeout(() => {
-			const newNumber = Math.ceil(Math.random() * 6)
+			const newNumber = Math.ceil(Math.random() * 5)
 			this.setState({ randomNumber: newNumber })
-			newNumber === 6 && this.animateBlink()
+			newNumber === 5 && this.animateBlink()
 			this.randomize()
 		}, 4000)
 	}
@@ -75,9 +76,10 @@ class Home extends Component {
 				}}
 			>
 				<img
+					className="bloodDrip"
 					src="gifs/blood_drip.gif"
 					alt="blood drip"
-					style={{ width: '100vw', maxHeight: 30, marginTop: -2 }}
+					style={{ marginTop: -2 }}
 				/>
 				<div className="homeTop">
 					<img
@@ -94,7 +96,7 @@ class Home extends Component {
 					/>
 
 					<img
-						className="catRight cat"
+						className="imgHorizontalFlip cat"
 						src="images/cat-compress.gif"
 						alt="cat walk"
 					/>
@@ -102,12 +104,12 @@ class Home extends Component {
 				<div className="homeBottom">
 					<img src="icons/lightening_break-compress.gif" alt="lightening" />
 				</div>
+				<Alert />
 				<img
+					className="bloodDrip"
 					src="gifs/blood_drip.gif"
 					alt="blood drip"
 					style={{
-						width: '100vw',
-						maxHeight: 30,
 						margin: 0,
 						transform: 'rotate(180deg)'
 					}}

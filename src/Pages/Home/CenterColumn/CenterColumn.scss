@@ -11,15 +11,15 @@
 	justify-content: space-around;
 	align-items: center;
 	height: 64px;
-	margin: -12px 0 0;
+	margin: -30px 0 0;
 }
 
 .eye {
+	margin-top: -16px;
 	text-align: center;
 	display: block;
 	height: 64px;
 	font-size: 4em;
-	margin: 0;
 	padding: 0;
 	cursor: inherit;
 }
@@ -76,10 +76,9 @@
 }
 
 .mainImageTitle {
-	// mask: url('/textures/bricks.jpg');
 	margin: 0;
 	font-size: 36px;
-	color: rgb(255, 34, 0);
+	color: rgba(255, 34, 0, 0.9);
 	font-family: 'Nosifer', cursive;
 	font-weight: bold;
 }
