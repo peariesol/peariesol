@@ -1,0 +1,140 @@
+.infoBottom {
+	height: 70vh;
+	max-height: 80vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.pressContainer {
+	margin: 0 auto;
+	height: 100%;
+	width: 60vw;
+	min-width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.pressQuoteContainer {
+	height: 100%;
+	border: 1px solid black;
+	background: orange;
+}
+
+.pressQuotes {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.pressQuote {
+	font-size: 0.8em;
+	font-family: cursive;
+	padding: 4px;
+	margin: 8px;
+	background: lightyellow;
+	color: purple;
+	display: inline-block;
+	text-overflow: ellipsis;
+}
+
+.pressLinkContainer {
+	height: 100%;
+	border: 1px dashed rosybrown;
+	background: green;
+}
+
+.pressLinks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.pressLink {
+	margin: 6px;
+	padding: 8px;
+	background: darkblue;
+	animation: colorChange 1s linear infinite;
+	animation-play-state: paused;
+	display: inline-block;
+}
+
+.pressLink:hover {
+	cursor: help;
+	animation-play-state: running;
+	p {
+		text-decoration: underline wavy;
+	}
+}
+
+.pressHeading {
+	margin: 4px;
+}
+
+.hotLinks {
+	min-width: 130px;
+	width: 40vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hotLink {
+	padding: 0;
+	animation: colorChange 1s linear infinite;
+	animation-play-state: paused;
+	background: purple;
+	max-height: 50px;
+	border-radius: 3px;
+	margin: 4px;
+	padding: 4px;
+	p {
+		animation: linkTwerk 2s linear infinite alternate;
+		animation-play-state: running;
+	}
+}
+
+.hotLink:hover {
+	animation-play-state: running;
+	text-decoration: underline wavy;
+	cursor: help;
+}
+
+.horseVoteBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.horseVote {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap-reverse;
+	img {
+		margin: 0 6px;
+	}
+}
+
+.horseVoteTitle {
+	color: red;
+	margin: 6px 0 4px;
+}
+
+@keyframes linkTwerk {
+	0% {
+		font-size: 1em;
+		transform: rotate(-2deg);
+	}
+	100% {
+		font-size: 1.4em;
+		transform: rotate(5deg);
+	}
+}

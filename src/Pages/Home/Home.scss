@@ -36,6 +36,11 @@
 	position: relative;
 }
 
+.catSpin {
+	transition: 500ms;
+	transform: rotateY(180deg) !important;
+}
+
 .imgHorizontalFlip {
 	transform: scaleX(-1);
 }
@@ -51,4 +56,8 @@
 
 .invertColors {
 	filter: invert(100%);
+}
+
+.rightCat {
+	animation: catSpin 1s linear forwards;
 }

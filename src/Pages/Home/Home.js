@@ -15,7 +15,9 @@ class Home extends Component {
 			mouseX: null,
 			mouseY: null,
 			netscapeFollow: false,
-			invertColors: false
+			invertColors: false,
+			catSpin: '',
+			secretGlow: false
 		}
 	}
 
@@ -58,13 +60,28 @@ class Home extends Component {
 		this.setState({ invertColors: !this.state.invertColors })
 	}
 
+	catSpin = () => {
+		this.setState({ catSpin: 'catSpin' })
+		setTimeout(() => this.setState({ catSpin: '' }), 600)
+	}
+
+	handleHorseHover = () => {
+		this.setState({ secretGlow: true })
+	}
+
+	handleHorseUnHover = () => {
+		this.setState({ secretGlow: false })
+	}
+
 	render() {
 		const {
 			eyeBlink,
 			mouseX,
 			mouseY,
 			netscapeFollow,
-			invertColors
+			invertColors,
+			catSpin,
+			secretGlow
 		} = this.state
 
 		return (
@@ -90,16 +107,28 @@ class Home extends Component {
 					/>
 
 					<CenterColumn
+						handleHorseHover={this.handleHorseHover}
+						handleHorseUnHover={this.handleHorseUnHover}
 						eyeBlink={eyeBlink}
 						invertColors={invertColors}
 						setInvertColors={this.setInvertColors}
 					/>
-
-					<img
-						className="imgHorizontalFlip cat"
-						src="images/cat-compress.gif"
-						alt="cat walk"
-					/>
+					<div>
+						<img
+							className={`imgHorizontalFlip cat ${catSpin}`}
+							src="images/cat-compress.gif"
+							alt="cat walk"
+							onClick={this.catSpin}
+						/>
+						<span
+							style={{
+								color: 'yellow',
+								visibility: secretGlow ? 'visible' : 'hidden'
+							}}
+						>
+							SECRET
+						</span>
+					</div>
 				</div>
 				<div className="homeBottom">
 					<img src="icons/lightening_break-compress.gif" alt="lightening" />

@@ -70,7 +70,7 @@ class MoreCat extends Component {
 					</p>
 				</div>
 				<div className="catForm">
-					<input
+                    <input
 						type="text"
 						placeholder="those juicy digits"
 						value={input}

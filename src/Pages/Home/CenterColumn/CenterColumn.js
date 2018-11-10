@@ -2,7 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import './CenterColumn.css'
 
-const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
+const CenterColumn = ({
+	invertColors,
+	setInvertColors,
+	eyeBlink,
+	handleHorseHover,
+	handleHorseUnHover
+}) => (
 	<div className="centerColumn">
 		<div className="eyeBox">
 			<img
@@ -29,6 +35,8 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 				src="icons/horsewalk-compress-transparent.gif"
 				alt="horse"
 				height="60"
+				onMouseOver={handleHorseHover}
+				onMouseOut={handleHorseUnHover}
 			/>
 			<p className={`mainImageTitle font-effect-fire-animation`}>Pearie Sol</p>
 			<img
@@ -66,8 +74,10 @@ const CenterColumn = ({ invertColors, setInvertColors, eyeBlink }) => (
 
 CenterColumn.propTypes = {
 	invertColors: PropTypes.bool.isRequired,
+	eyeBlink: PropTypes.string.isRequired,
 	setInvertColors: PropTypes.func.isRequired,
-	eyeBlink: PropTypes.string.isRequired
+	handleHorseHover: PropTypes.func.isRequired,
+	handleHorseUnHover: PropTypes.func.isRequired
 }
 
 export default CenterColumn
