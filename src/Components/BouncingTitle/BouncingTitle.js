@@ -33,16 +33,14 @@ class BouncingTitle extends Component {
             ${this.state.colors.c}
         )`
 		return (
-			false && (
-				<div
-					onMouseOver={this.props.randomCursor}
-					className="bouncingTitleBox"
-					onClick={this.handleClick}
-					style={{ background }}
-				>
-					<h2 className="bouncingTitle">Pearie Sol</h2>
-				</div>
-			)
+			<div
+				onMouseOver={this.props.randomCursor}
+				className="bouncingTitleBox"
+				onClick={this.handleClick}
+				style={{ background }}
+			>
+				<h2 className="bouncingTitle">Pearie Sol</h2>
+			</div>
 		)
 	}
 }

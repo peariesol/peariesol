@@ -1,11 +1,12 @@
 import React from 'react'
 import moment from 'moment'
+import { reverse } from 'lodash'
 import Shows from './Components/Shows'
 import showList from '../../Utils/ShowList'
 import './ShowsPage.css'
 
 const previousShows = []
-const upcomingShows = []
+let upcomingShows = []
 
 showList.forEach(show => {
 	if (moment(show.date).diff(moment()) < 0) {
@@ -14,6 +15,8 @@ showList.forEach(show => {
 		upcomingShows.push(show)
 	}
 })
+
+upcomingShows = reverse(upcomingShows)
 
 const ShowsPage = () => (
 	<div className="showsPage">

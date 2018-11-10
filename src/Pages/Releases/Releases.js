@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Releases.css'
 
+const here = true
+
 class Releases extends Component {
 	constructor(props) {
 		super(props)
@@ -9,10 +11,9 @@ class Releases extends Component {
 		}
 	}
 
-	setLoaded = () => this.setState({ loaded: true })
+	setLoaded = () => here && this.setState({ loaded: true })
 
 	render() {
-		console.log(this.state.loaded)
 		return (
 			<div className="releasesPage">
 				<div className="releasesPhotoBox">

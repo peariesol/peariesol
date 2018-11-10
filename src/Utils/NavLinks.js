@@ -5,27 +5,27 @@ export const navLinks = [
 		path: '/'
 	},
 	{
-		text: 'releases',
+		text: 'Releases',
 		value: 'releases',
 		path: './releases'
 	},
 	{
-		text: 'media',
+		text: 'Media',
 		value: 'media',
 		path: 'media'
 	},
 	{
-		text: 'shows',
+		text: 'Shows',
 		value: 'shows',
 		path: './shows'
 	},
 	{
-		text: 'info',
+		text: 'Info',
 		value: 'info',
 		path: '/info'
 	},
 	{
-		text: 'more cat',
+		text: 'More cat',
 		value: 'moreCat',
 		path: './ok'
 	}

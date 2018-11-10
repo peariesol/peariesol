@@ -61,3 +61,14 @@
 .rightCat {
 	animation: catSpin 1s linear forwards;
 }
+
+.secretBox {
+	margin-top: 20vw;
+	width: 40px;
+	height: 40px;
+	color: yellow;
+}
+
+.secretGlow {
+	box-shadow: yellow 0 0 10px;
+}

@@ -17,6 +17,7 @@ $right: calc(100vw - 120px);
 }
 
 .bouncingTitle {
+	color: #330544;
 	margin: 0;
 	padding: 24px 0 0;
 	font-size: $titleRadius/3;
@@ -41,5 +42,11 @@ $right: calc(100vw - 120px);
 	}
 	100% {
 		left: $right;
+	}
+}
+
+@media (max-width: 700px) {
+	.bouncingTitleBox {
+		visibility: hidden;
 	}
 }

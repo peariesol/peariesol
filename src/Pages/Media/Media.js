@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './Media.css'
 
+const here = true
+
 class Media extends Component {
 	constructor(props) {
 		super(props)
@@ -9,7 +11,7 @@ class Media extends Component {
 		}
 	}
 
-	setLoaded = propName => () => this.setState({ [propName]: true })
+	setLoaded = propName => () => here && this.setState({ [propName]: true })
 
 	render() {
 		return (

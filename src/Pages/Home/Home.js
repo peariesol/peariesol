@@ -17,7 +17,8 @@ class Home extends Component {
 			netscapeFollow: false,
 			invertColors: false,
 			catSpin: '',
-			secretGlow: false
+			secretGlow: false,
+			secretClicked: false
 		}
 	}
 
@@ -73,6 +74,10 @@ class Home extends Component {
 		this.setState({ secretGlow: false })
 	}
 
+	handleSecret = () => {
+		this.setState({ secretClicked: !this.state.secretClicked })
+	}
+
 	render() {
 		const {
 			eyeBlink,
@@ -81,7 +86,8 @@ class Home extends Component {
 			netscapeFollow,
 			invertColors,
 			catSpin,
-			secretGlow
+			secretGlow,
+			secretClicked
 		} = this.state
 
 		return (
@@ -89,7 +95,11 @@ class Home extends Component {
 				className="home"
 				onMouseMove={this.trackMouse}
 				style={{
-					backgroundImage: "url('textures/hauntedhouselightening-compress.gif')"
+					backgroundImage: `url(${
+						!secretClicked
+							? 'textures/hauntedhouselightening-compress.gif'
+							: 'textures/angel-with-bone-wings.jpg'
+					})`
 				}}
 			>
 				<img
@@ -120,14 +130,7 @@ class Home extends Component {
 							alt="cat walk"
 							onClick={this.catSpin}
 						/>
-						<span
-							style={{
-								color: 'yellow',
-								visibility: secretGlow ? 'visible' : 'hidden'
-							}}
-						>
-							SECRET
-						</span>
+						<div onClick={this.handleSecret} className={`secretBox ${secretGlow && 'secretGlow'}`}/>
 					</div>
 				</div>
 				<div className="homeBottom">
