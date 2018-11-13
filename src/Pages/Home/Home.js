@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import CenterColumn from './CenterColumn/CenterColumn'
-import Netscape from '../../Components/Netscape/Netscape'
-import Alert from './Alert/Alert'
+import Netscape from 'Components/Netscape/Netscape'
+import Alert from 'Components/Alert/Alert'
 import './Home.css'
 
 let timer = null
@@ -130,7 +130,10 @@ class Home extends Component {
 							alt="cat walk"
 							onClick={this.catSpin}
 						/>
-						<div onClick={this.handleSecret} className={`secretBox ${secretGlow && 'secretGlow'}`}/>
+						<div
+							onClick={this.handleSecret}
+							className={`secretBox ${secretGlow && 'secretGlow'}`}
+						/>
 					</div>
 				</div>
 				<div className="homeBottom">

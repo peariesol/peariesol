@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { colorNames } from '../../Utils/ColorNames'
+import { colorNames } from 'Utils/ColorNames'
 import PropTypes from 'prop-types'
 import { random } from 'lodash'
 import './BouncingTitle.css'

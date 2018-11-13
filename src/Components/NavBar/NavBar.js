@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { navLinks } from '../../Utils/NavLinks'
-import { colorNames } from '../../Utils/ColorNames'
+import { navLinks } from 'Utils/NavLinks'
+import { colorNames } from 'Utils/ColorNames'
 import { random } from 'lodash'
 import { Link } from 'react-router-dom'
-import Routes from '../../Routes'
+import Routes from 'Routes'
 import './NavBar.css'
 
 class NavBar extends Component {

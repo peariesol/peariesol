@@ -1,6 +1,6 @@
 import React from 'react'
-import links from '../../../Utils/Press'
-import quotes from '../../../Utils/PressQuotes'
+import links from 'Utils/Press'
+import quotes from 'Utils/PressQuotes'
 import './InfoPageBottom.css'
 
 const pressLinks = links.map(({ value, text, link }) => (

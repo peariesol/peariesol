@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import { reverse } from 'lodash'
 import { join, map, get } from 'lodash'
-import showList from '../../../Utils/ShowList'
+import showList from 'Utils/ShowList'
 import './Alert.css'
 
 let upcomingShows = []

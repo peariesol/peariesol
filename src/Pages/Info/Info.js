@@ -1,6 +1,6 @@
 import React from 'react'
-import InfoPageBottom from './InfoPageBottom/InfoPageBottom'
-import { dumbText } from '../../Utils/Constants'
+import InfoPageBottom from './Components/InfoPageBottom/InfoPageBottom'
+import { dumbText } from 'Utils/Constants'
 import './Info.css'
 
 const Info = () => (
