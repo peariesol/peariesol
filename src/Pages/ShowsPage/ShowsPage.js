@@ -27,7 +27,15 @@ const ShowsPage = () => (
 				textAlign: 'center'
 			}}
 		>
-			<h3 className="showType upcomingHeading">☀️ Upcoming Shows ☀️</h3>
+			<h3 className="showType upcomingHeading">
+				<span aria-label="sun" role="img">
+					☀️
+				</span>
+				{' Upcoming Shows '}
+				<span aria-label="sun" role="img">
+					☀️
+				</span>
+			</h3>
 			<Shows shows={upcomingShows} upcoming={true} />
 		</div>
 		<div
@@ -37,7 +45,15 @@ const ShowsPage = () => (
 				textAlign: 'center'
 			}}
 		>
-			<h3 className="showType previousHeading">🌙 Previous Shows 🌙</h3>
+			<h3 className="showType previousHeading">
+				<span role="img" aria-label="moon">
+					🌙
+				</span>
+				{' Previous Shows '}
+				<span role="img" aria-label="moon">
+					🌙
+				</span>
+			</h3>
 			<Shows shows={previousShows} upcoming={false} />
 		</div>
 	</div>
