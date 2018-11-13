@@ -9,7 +9,7 @@
 	}
 }
 
-.showType {
+.showTypeHeading {
 	text-align: center;
 	padding: 8px;
 	margin: 8px auto;
@@ -30,4 +30,15 @@
 	background: black;
 	color: whitesmoke;
 	border: 2px solid #111;
+}
+
+@media (max-width: 700px) {
+	.showTypeHeading {
+		font-size: 1.7em;
+	}
+}
+
+@media (max-width: 500px) {
+	.showTypeHeading {
+	}
 }

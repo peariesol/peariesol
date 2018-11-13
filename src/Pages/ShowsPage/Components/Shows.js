@@ -12,12 +12,17 @@ const Shows = ({ shows, upcoming }) => {
 		shows.length >= 1 ? (
 			shows.map(({ date, venue, location, otherActs, link }, index) => {
 				index !== 0 && (count = count - 1)
+
+				let fontSize = expFont(count + 1, x)
+				if (window.innerWidth < 700 && fontSize > 18) {
+					fontSize = 18
+				} else if (window.innerWidth < 500 && fontSize > 15) {
+					fontSize = 15
+				}
+
 				return (
 					<ol key={index}>
-						<li
-							className="showListBox"
-							style={{ fontSize: expFont(count + 1, x) }}
-						>
+						<li className="showListBox" style={{ fontSize: fontSize }}>
 							<ul>
 								<li>
 									<span className="showListItemRow">
@@ -46,7 +51,7 @@ const Shows = ({ shows, upcoming }) => {
 								{link && (
 									<li>
 										<span className="showListItemRow showListLink">
-											<a href={`${link}`}>{link}</a>
+											<a href={`${link}`}>more info</a>
 										</span>
 									</li>
 								)}

@@ -27,7 +27,7 @@ const ShowsPage = () => (
 				textAlign: 'center'
 			}}
 		>
-			<h3 className="showType upcomingHeading">
+			<h3 className="showTypeHeading upcomingHeading">
 				<span aria-label="sun" role="img">
 					☀️
 				</span>
@@ -45,7 +45,7 @@ const ShowsPage = () => (
 				textAlign: 'center'
 			}}
 		>
-			<h3 className="showType previousHeading">
+			<h3 className="showTypeHeading previousHeading">
 				<span role="img" aria-label="moon">
 					🌙
 				</span>

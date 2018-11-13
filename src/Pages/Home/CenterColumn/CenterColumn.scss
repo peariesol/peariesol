@@ -77,10 +77,12 @@
 
 .mainImageTitle {
 	margin: 0;
+	padding: 0;
 	font-size: 36px;
 	color: rgba(255, 34, 0, 0.9);
 	font-family: 'Nosifer', cursive;
 	font-weight: bold;
+	text-align: center;
 }
 
 @keyframes breathe {
@@ -100,5 +102,26 @@
 
 	100% {
 		transform: rotateX(90deg);
+	}
+}
+
+@media (max-width: 700px) {
+	.tikiImage {
+		transform: scale(0.8, 0.8);
+	}
+}
+
+@media (max-width: 500px) {
+	.mainImageTitle {
+		font-size: 24px;
+	}
+
+	.tikiImage {
+		display: none;
+	}
+
+	.mainImage {
+		max-width: 200px;
+		width: 100%;
 	}
 }

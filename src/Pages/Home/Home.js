@@ -145,7 +145,7 @@ class Home extends Component {
 					src="gifs/blood_drip.gif"
 					alt="blood drip"
 					style={{
-						margin: 0,
+						margin: window.innerWidth < 500 ? '3px 0' : 0,
 						transform: 'rotate(180deg)'
 					}}
 				/>

@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import './Netscape.css'
 
 const Netscape = ({ setNetscapeFollow, netscapeFollow, mouseX, mouseY }) => (
 	<img
