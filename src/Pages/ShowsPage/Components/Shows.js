@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import moment from 'moment'
 import './Shows.css'
 
 const maxFont = 20
@@ -12,7 +13,9 @@ const Shows = ({ shows, upcoming }) => {
 		shows.length >= 1 ? (
 			shows.map(({ date, venue, location, otherActs, link }, index) => {
 				index !== 0 && (count = count - 1)
-
+				const dateDisplay = upcoming
+					? moment(date).format('MMM Do')
+					: moment(date).format('MMM Do YYYY')
 				let fontSize = expFont(count + 1, x)
 				if (window.innerWidth < 700 && fontSize > 18) {
 					fontSize = 18
@@ -27,7 +30,7 @@ const Shows = ({ shows, upcoming }) => {
 								<li>
 									<span className="showListItemRow">
 										<strong>Date: </strong>
-										{date}
+										{dateDisplay}
 									</span>
 								</li>
 								<li>

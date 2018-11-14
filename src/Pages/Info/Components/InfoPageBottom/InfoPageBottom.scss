@@ -1,6 +1,5 @@
 .infoBottom {
-	height: 70vh;
-	max-height: 80vh;
+	height: 80vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -35,6 +34,7 @@
 	font-family: cursive;
 	padding: 4px;
 	margin: 8px;
+	border-radius: 2px;
 	background: lightyellow;
 	color: purple;
 	display: inline-block;
@@ -51,12 +51,13 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: center;
 }
 
 .pressLink {
 	margin: 6px;
 	padding: 8px;
+	border-radius: 2px;
 	background: darkblue;
 	animation: colorChange 1s linear infinite;
 	animation-play-state: paused;
@@ -74,8 +75,13 @@
 .pressHeading {
 	margin: 4px;
 	font-family: 'Sancreek', cursive;
+	color: rgb(80, 15, 15);
 	font-size: 1.6em;
 	text-align: center;
+}
+
+.hotLinkHeading {
+	width: 200px;
 }
 
 .hotLinks {
@@ -88,15 +94,20 @@
 }
 
 .hotLink {
-	padding: 0;
 	animation: colorChange 1s linear infinite;
 	animation-play-state: paused;
 	background: purple;
-	max-height: 50px;
+	height: 50px;
 	border-radius: 3px;
 	margin: 4px;
 	padding: 4px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	p {
+		margin: 0;
+		padding: 0;
 		animation: linkTwerk 2s linear infinite alternate;
 		animation-play-state: running;
 	}
@@ -122,11 +133,12 @@
 	align-items: center;
 	flex-wrap: wrap-reverse;
 	img {
-		margin: 0 6px;
+		margin: 0 8px;
 	}
 }
 
 .horseVoteTitle {
+	text-align: center;
 	font-family: fantasy;
 	color: red;
 	margin: 6px 0 4px;
@@ -140,5 +152,70 @@
 	100% {
 		font-size: 1.4em;
 		transform: rotate(5deg);
+	}
+}
+
+@media (max-width: 700px) {
+	.infoPageBottom {
+		height: 84vh;
+	}
+	.pressHeading {
+		font-size: 1.4em;
+	}
+	.pressQuote {
+		font-size: 0.7em;
+		margin: 6px;
+	}
+	.pressLink {
+		font-size: 0.9em;
+		margin: 4px;
+		padding: 6px;
+	}
+	.hotLinkHeading {
+		width: 180px;
+	}
+	.hotLink {
+		height: 40px;
+	}
+}
+
+@media (max-width: 500px) {
+	.infoPageBottom {
+		height: 84vh;
+	}
+	.pressHeading {
+		font-size: 1.2em;
+	}
+	.pressQuote {
+		font-size: 0.6em;
+		margin: 4px;
+		padding: 2px;
+	}
+	.pressLink {
+		font-size: 0.9em;
+		margin: 4px;
+		padding: 6px;
+	}
+	.hotLinkHeading {
+		width: 150px;
+		margin: 2px 0;
+	}
+	.hotLink {
+		height: 30px;
+	}
+	.horseVoteTitle {
+		font-size: 1em;
+		margin: 2px 0;
+	}
+
+	@keyframes linkTwerk {
+		0% {
+			font-size: 0.8em;
+			transform: rotate(-1deg);
+		}
+		100% {
+			font-size: 1em;
+			transform: rotate(3deg);
+		}
 	}
 }

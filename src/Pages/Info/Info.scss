@@ -10,12 +10,16 @@
 }
 
 .topRow {
-	margin: 20px 0 0;
-	padding: 0;
-	width: 100vw;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
+	width: 100vw;
+	margin: 10px 0 0;
+}
+
+.horseHead {
+	width: 60px;
+	height: 60px;
 }
 
 .contactInfo {
@@ -24,21 +28,12 @@
 	flex-wrap: no-wrap;
 	justify-content: center;
 	align-items: center;
-	margin: 0;
-	img {
-		height: 80px;
-	}
-}
-
-.emailSpan {
-	margin: 0 12px;
-	.contactInfoEmail {
-		border: 2px dashed lime;
-		padding: 8px;
-	}
 }
 
 .contactInfoEmail {
+	margin: 0 12px;
+	border: 2px dashed lime;
+	padding: 8px;
 	background: #771177dd;
 	font-size: 1.5em;
 	animation: colorChange 1s linear infinite;
@@ -53,6 +48,11 @@
 	cursor: help;
 }
 
+.emailImage {
+	width: 100px;
+	height: 60px;
+}
+
 .dumbText {
 	display: inline-block;
 	position: relative;
@@ -60,4 +60,38 @@
 	color: lightpink;
 	width: 60vw;
 	font-size: 8px;
+}
+
+@media (max-width: 700px) {
+	.infoPageTop {
+		height: 16vh;
+	}
+	.contactInfoEmail {
+		font-size: 1.3em;
+	}
+	.emailImage {
+		width: 80px;
+		height: 50px;
+	}
+}
+
+@media (max-width: 500px) {
+	.infoPageTop {
+		height: 16vh;
+	}
+	.horseHead {
+		width: 45px;
+		height: 45px;
+	}
+	.contactInfoEmail {
+		font-size: 1.1em;
+		margin: 0 6px;
+	}
+	.emailImage {
+		width: 70px;
+		height: 40px;
+	}
+	.dumbText {
+		width: 80vw;
+	}
 }

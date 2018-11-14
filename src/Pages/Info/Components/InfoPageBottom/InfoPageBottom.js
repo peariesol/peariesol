@@ -30,7 +30,7 @@ const InfoPageBottom = () => (
 			</div>
 		</div>
 		<div className="hotLinks bottomRow">
-			<img src="gifs/hotLinks.gif" alt="hot links" width="200" />
+			<img src="gifs/hotLinks.gif" alt="hot links" className="hotLinkHeading" />
 			<a href="https://g-a-u-c-h-e.bandcamp.com/releases" className="hotLink">
 				<p>Gauche</p>
 			</a>

@@ -106,3 +106,9 @@ a {
 		color: lightgreen;
 	}
 }
+
+@media (max-width: 500px) {
+	p {
+		font-size: 0.9em;
+	}
+}
