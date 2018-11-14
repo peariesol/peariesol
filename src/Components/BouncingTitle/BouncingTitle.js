@@ -32,7 +32,7 @@ class BouncingTitle extends Component {
             ${this.state.colors.b}, 
             ${this.state.colors.c}
         )`
-		return (
+		return window.innerWidth >= 500 ? (
 			<div
 				onMouseOver={this.props.randomCursor}
 				className="bouncingTitleBox"
@@ -41,7 +41,7 @@ class BouncingTitle extends Component {
 			>
 				<h2 className="bouncingTitle">Pearie Sol</h2>
 			</div>
-		)
+		) : null
 	}
 }
 

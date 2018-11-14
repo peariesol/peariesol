@@ -15,36 +15,40 @@ class Releases extends Component {
 
 	render() {
 		return (
-			<div className="releasesPage">
-				<div className="releasesPhotoBox">
-					<span />
-					<div className="iframeBox">
-						{!this.state.loaded && <div className="loader">Loading...</div>}
-						<iframe
-							style={{
-								visibility: this.state.loaded ? 'visible' : 'hidden',
-								border: 0,
-								width: 300,
-								height: 300
-							}}
-							onLoad={this.setLoaded}
-							id="bandCampEmbed"
-							title="pearie sol s/t tape"
-							src="https://bandcamp.com/EmbeddedPlayer/album=797557584/size=large/bgcol=333333/linkcol=20B2AA/minimal=true/transparent=true/"
-							seamless
-						>
-							<a href="http://peariesol.bandcamp.com/album/pearie-sol">
-								pearie sol by pearie sol
-							</a>
-						</iframe>
-					</div>
-					<a
-						href="http://sisterpolygonrecords.bigcartel.com/"
-						className="coolLink"
+			<div
+				className="releasesPage"
+				style={{ animationPlayState: this.state.loaded ? 'running' : 'paused' }}
+			>
+				<span />
+				<div className="iframeBox">
+					{!this.state.loaded && <div className="loader">Loading...</div>}
+					<iframe
+						style={{
+							visibility: this.state.loaded ? 'visible' : 'hidden',
+							border: 0,
+							width: 300,
+							height: 300,
+							animationPlayState: this.state.loaded ? 'running' : 'paused'
+						}}
+						onLoad={this.setLoaded}
+						id="bandCampEmbed"
+						title="pearie sol s/t tape"
+						src="https://bandcamp.com/EmbeddedPlayer/album=797557584/size=large/bgcol=333333/linkcol=20B2AA/minimal=true/transparent=true/"
+						seamless
 					>
-						<span>Available on Sister Polygon Records</span>
-					</a>
+						<a href="http://peariesol.bandcamp.com/album/pearie-sol">
+							pearie sol by pearie sol
+						</a>
+					</iframe>
 				</div>
+				<a
+					href="http://sisterpolygonrecords.bigcartel.com/"
+					className="coolLink"
+				>
+					<span className="sisterPoly">
+						Available on Sister Polygon Records
+					</span>
+				</a>
 			</div>
 		)
 	}
