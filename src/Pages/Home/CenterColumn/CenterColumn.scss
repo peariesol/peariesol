@@ -56,10 +56,11 @@
 	margin: 0;
 	padding: 0;
 	font-size: 36px;
-	color: rgba(255, 34, 0, 0.9);
+	opacity: 0.9;
 	font-family: 'Nosifer', cursive;
 	font-weight: bold;
 	text-align: center;
+	user-select: none;
 }
 
 @keyframes breathe {

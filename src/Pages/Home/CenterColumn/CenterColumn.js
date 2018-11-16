@@ -7,7 +7,12 @@ const CenterColumn = ({
 	invertColors,
 	setInvertColors,
 	handleHorseHover,
-	handleHorseUnHover
+	handleHorseUnHover,
+	changeTitleColor,
+	titleColor,
+	handleTikiClick,
+	leftTikiHue,
+	rightTikiHue
 }) => (
 	<div className="centerColumn">
 		<EyeBox />
@@ -20,7 +25,13 @@ const CenterColumn = ({
 				onMouseOver={handleHorseHover}
 				onMouseOut={handleHorseUnHover}
 			/>
-			<p className={`mainImageTitle font-effect-fire-animation`}>Pearie Sol</p>
+			<p
+				style={{ color: titleColor }}
+				onClick={changeTitleColor}
+				className={`mainImageTitle font-effect-fire-animation`}
+			>
+				Pearie Sol
+			</p>
 			<img
 				src="icons/horsewalk-compress-transparent.gif"
 				alt="horse"
@@ -33,9 +44,11 @@ const CenterColumn = ({
 				style={{ backgroundImage: 'url("textures/bricks.jpg")' }}
 			/>
 			<img
+				onClick={handleTikiClick('left')}
 				className="centerImages tikiImage"
 				src="icons/firetiki-compress.gif"
 				alt="tiki fire"
+				style={{ filter: `hue-rotate(${leftTikiHue}deg)` }}
 			/>
 			<img
 				onClick={setInvertColors}
@@ -46,9 +59,11 @@ const CenterColumn = ({
 				alt="self"
 			/>
 			<img
+				onClick={handleTikiClick('right')}
 				className="centerImages tikiImage"
 				src="icons/firetiki-compress.gif"
 				alt="tiki fire"
+				style={{ filter: `hue-rotate(${rightTikiHue}deg)` }}
 			/>
 		</div>
 	</div>
@@ -56,9 +71,14 @@ const CenterColumn = ({
 
 CenterColumn.propTypes = {
 	invertColors: PropTypes.bool.isRequired,
+	titleColor: PropTypes.string.isRequired,
+	rightTikiHue: PropTypes.number.isRequired,
+	leftTikiHue: PropTypes.number.isRequired,
 	setInvertColors: PropTypes.func.isRequired,
 	handleHorseHover: PropTypes.func.isRequired,
-	handleHorseUnHover: PropTypes.func.isRequired
+	handleHorseUnHover: PropTypes.func.isRequired,
+	changeTitleColor: PropTypes.func.isRequired,
+	handleTikiClick: PropTypes.func.isRequired
 }
 
 export default CenterColumn

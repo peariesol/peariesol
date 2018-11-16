@@ -51,7 +51,6 @@ class EyeBox extends Component {
 	}
 
 	render() {
-		console.log(this.state.eyeClickCount)
 		const eyeDisplay = this.state.theEyes.map(eye => (
 			<span
 				key={eye.key}
