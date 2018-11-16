@@ -1,0 +1,55 @@
+.eyeBox {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 64px;
+	margin: -20px 0 0;
+}
+
+.eye {
+	margin-top: -10px;
+	text-align: center;
+	display: block;
+	height: 64px;
+	font-size: 4em;
+	padding: 0;
+	cursor: inherit;
+}
+
+.playBlink {
+	animation: blink 1s ease 2 alternate;
+}
+
+@keyframes blink {
+	0% {
+		transform: rotateX(0);
+	}
+
+	100% {
+		transform: rotateX(90deg);
+	}
+}
+
+@media (max-width: 600px) {
+	.eyeBox {
+		height: 48px;
+		margin: -20px 0 0;
+	}
+
+	.eye {
+		height: 48px;
+		font-size: 3em;
+	}
+}
+
+@media (max-width: 400px) {
+	.eyeBox {
+		height: 32px;
+	}
+
+	.eye {
+		height: 32px;
+		font-size: 2em;
+	}
+}

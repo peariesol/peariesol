@@ -4,14 +4,10 @@ import Netscape from 'Components/Netscape/Netscape'
 import Alert from 'Components/Alert/Alert'
 import './Home.css'
 
-let timer = null
-
 class Home extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			randomNumber: 0,
-			eyeBlink: '',
 			mouseX: null,
 			mouseY: null,
 			netscapeFollow: false,
@@ -20,30 +16,6 @@ class Home extends Component {
 			secretGlow: false,
 			secretClicked: false
 		}
-	}
-
-	componentDidMount() {
-		this.randomize()
-	}
-
-	componentWillUnMount() {
-		clearInterval(timer)
-	}
-
-	randomize() {
-		timer = setTimeout(() => {
-			const newNumber = Math.ceil(Math.random() * 5)
-			this.setState({ randomNumber: newNumber })
-			newNumber === 5 && this.animateBlink()
-			this.randomize()
-		}, 4000)
-	}
-
-	animateBlink() {
-		this.setState({
-			eyeBlink: 'playBlink'
-		})
-		setTimeout(() => this.setState({ eyeBlink: '' }), 3000)
 	}
 
 	trackMouse = e => {
@@ -80,7 +52,6 @@ class Home extends Component {
 
 	render() {
 		const {
-			eyeBlink,
 			mouseX,
 			mouseY,
 			netscapeFollow,
@@ -119,7 +90,6 @@ class Home extends Component {
 					<CenterColumn
 						handleHorseHover={this.handleHorseHover}
 						handleHorseUnHover={this.handleHorseUnHover}
-						eyeBlink={eyeBlink}
 						invertColors={invertColors}
 						setInvertColors={this.setInvertColors}
 					/>

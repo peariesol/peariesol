@@ -1,34 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import EyeBox from '../EyeBox/EyeBox'
 import './CenterColumn.css'
 
 const CenterColumn = ({
 	invertColors,
 	setInvertColors,
-	eyeBlink,
 	handleHorseHover,
 	handleHorseUnHover
 }) => (
 	<div className="centerColumn">
-		<div className="eyeBox">
-			<img
-				src="icons/devilfire-compress.gif"
-				className="devilFire"
-				alt="devil fire"
-			/>
-			<span
-				className={`eye ${eyeBlink}`}
-				aria-label="all knowing eye, hi ahmad"
-				role="img"
-			>
-				👁️
-			</span>
-			<img
-				src="icons/devilfire-compress.gif"
-				className="devilFire"
-				alt="devil fire"
-			/>
-		</div>
+		<EyeBox />
 		<div className="mainTitleBox">
 			<img
 				className="imgHorizontalFlip"
@@ -74,7 +56,6 @@ const CenterColumn = ({
 
 CenterColumn.propTypes = {
 	invertColors: PropTypes.bool.isRequired,
-	eyeBlink: PropTypes.string.isRequired,
 	setInvertColors: PropTypes.func.isRequired,
 	handleHorseHover: PropTypes.func.isRequired,
 	handleHorseUnHover: PropTypes.func.isRequired
