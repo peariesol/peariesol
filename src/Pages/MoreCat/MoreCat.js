@@ -13,8 +13,9 @@ class MoreCat extends Component {
 	}
 
 	componentWillMount() {
+		const theCats = []
 		times(20, index =>
-			this.state.cats.push(
+			theCats.push(
 				<div onMouseOver={this.handleCatHover} key={`cat${index}`}>
 					<img
 						className="invisibleCat"
@@ -25,6 +26,7 @@ class MoreCat extends Component {
 				</div>
 			)
 		)
+		this.setState({ cats: theCats })
 	}
 
 	handleCatHover = e => {
@@ -70,7 +72,7 @@ class MoreCat extends Component {
 					</p>
 				</div>
 				<div className="catForm">
-                    <input
+					<input
 						type="text"
 						placeholder="those juicy digits"
 						value={input}

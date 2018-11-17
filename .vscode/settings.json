@@ -1,12 +1,16 @@
 {
 	"editor.detectIndentation": false,
-	"cSpell.words": [
-		"Bedford",
-		"PEARIE",
-		"Randomizer",
-		"bedfor",
-		"sisterpolygon"
-	],
+    "cSpell.words": [
+        "Bedford",
+        "PEARIE",
+        "Randomizer",
+        "bedfor",
+        "devilfire",
+        "firetiki",
+        "hauntedhouselightening",
+        "horsewalk",
+        "sisterpolygon"
+    ],
 	"files.exclude": {
 		"**/.svn": false,
 		"**/*.css": true,

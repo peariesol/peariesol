@@ -52,9 +52,7 @@ class NavBar extends Component {
 							className={`navLink ${link.value !== 'moreCat' && 'normalNav'}`}
 						>
 							<Link to={link.path}>
-								<p id={link.value} className="navText">
-									{link.text}
-								</p>
+								<p id={link.value}>{link.text}</p>
 							</Link>
 						</span>
 					))}

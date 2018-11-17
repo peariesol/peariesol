@@ -9,6 +9,7 @@ const CenterColumn = ({
 	handleHorseHover,
 	handleHorseUnHover,
 	changeTitleColor,
+	clickCount,
 	titleColor,
 	handleTikiClick,
 	leftTikiHue,
@@ -52,9 +53,12 @@ const CenterColumn = ({
 			/>
 			<img
 				onClick={setInvertColors}
-				className={`centerImages mainImage ${
-					invertColors ? 'invertColors' : ''
-				}`}
+				className={`
+                    centerImages 
+                    mainImage 
+                    ${invertColors ? 'invertColors' : ''}
+                    ${clickCount >= 10 ? 'changeHue' : ''}
+                `}
 				src="photos/tape_art1-compress.jpg"
 				alt="self"
 			/>
@@ -74,6 +78,7 @@ CenterColumn.propTypes = {
 	titleColor: PropTypes.string.isRequired,
 	rightTikiHue: PropTypes.number.isRequired,
 	leftTikiHue: PropTypes.number.isRequired,
+	clickCount: PropTypes.number.isRequired,
 	setInvertColors: PropTypes.func.isRequired,
 	handleHorseHover: PropTypes.func.isRequired,
 	handleHorseUnHover: PropTypes.func.isRequired,

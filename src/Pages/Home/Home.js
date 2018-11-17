@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { random } from 'lodash'
+import { random, times } from 'lodash'
 import CenterColumn from './CenterColumn/CenterColumn'
 import Netscape from 'Components/Netscape/Netscape'
 import Alert from 'Components/Alert/Alert'
@@ -22,12 +22,60 @@ class Home extends Component {
 			mouseY: null,
 			netscapeFollow: false,
 			invertColors: false,
+			clickCount: 0,
 			catSpin: '',
 			secretGlow: false,
 			secretClicked: false,
 			titleColor: '#FF2200',
 			leftTikiHue: 0,
-			rightTikiHue: 0
+			rightTikiHue: 0,
+			catsLeft: [],
+			catsRight: []
+		}
+	}
+
+	componentDidMount() {
+		const catsLeft = []
+		const catsRight = []
+		times(4, index =>
+			index < 2
+				? catsLeft.push(
+						<div onMouseOver={this.handleCatHover} key={`cat${index}`}>
+							<img
+								className="invisibleCat"
+								src="images/cat-compress.gif"
+								height="100"
+								alt="secret cat"
+								onClick={this.handleSmallCatClick}
+							/>
+						</div>
+				  )
+				: catsRight.push(
+						<div onMouseOver={this.handleCatHover} key={`cat${index}`}>
+							<img
+								className="invisibleCat imgHorizontalFlip"
+								src="images/cat-compress.gif"
+								height="100"
+								alt="secret cat"
+								onClick={this.handleSmallCatClick}
+							/>
+						</div>
+				  )
+		)
+		this.setState({ catsLeft, catsRight })
+	}
+
+	handleSmallCatClick = e => {
+		e.target.style.filter = `hue-rotate(${random(
+			-360,
+			360
+		)}deg) saturate(200) ${random(0, 20) === 0 ? 'invert(1)' : ''}`
+	}
+
+	handleCatHover = e => {
+		const catImg = e.target.firstChild
+		if (catImg && catImg.className.includes('invisibleCat')) {
+			catImg.className = catImg.className.replace('invisibleCat', 'visibleCat')
 		}
 	}
 
@@ -47,12 +95,16 @@ class Home extends Component {
 	}
 
 	setInvertColors = () => {
-		this.setState({ invertColors: !this.state.invertColors })
+		this.setState({
+			invertColors: !this.state.invertColors,
+			clickCount: this.state.clickCount + 1
+		})
 	}
 
-	catSpin = () => {
-		this.setState({ catSpin: 'catSpin' })
-		setTimeout(() => this.setState({ catSpin: '' }), 600)
+	catSpin = e => {
+		const catClass = e.target.classList
+		catClass.add('catSpin')
+		setTimeout(() => catClass.remove('catSpin'), 500)
 	}
 
 	handleHorseHover = () => {
@@ -68,7 +120,6 @@ class Home extends Component {
 	}
 
 	handleTikiClick = name => () => {
-		console.log(name)
 		if (name === 'left') {
 			this.setState({
 				leftTikiHue: this.state.leftTikiHue - 90
@@ -86,15 +137,16 @@ class Home extends Component {
 			mouseY,
 			netscapeFollow,
 			invertColors,
+			clickCount,
 			catSpin,
 			secretGlow,
 			secretClicked,
 			titleColor,
 			leftTikiHue,
-			rightTikiHue
+			rightTikiHue,
+			catsLeft,
+			catsRight
 		} = this.state
-
-		console.log(leftTikiHue)
 
 		return (
 			<div
@@ -115,12 +167,15 @@ class Home extends Component {
 					style={{ marginTop: -2 }}
 				/>
 				<div className="homeTop">
-					<img
-						className="cat"
-						src="images/cat-compress.gif"
-						alt="cat walk"
-						onClick={this.setInvertColors}
-					/>
+					<div className="leftColumn sideColumn">
+						<img
+							className="cat"
+							src="images/cat-compress.gif"
+							alt="cat walk"
+							onClick={this.catSpin}
+						/>
+						{catsLeft.map(cat => cat)}
+					</div>
 
 					<CenterColumn
 						handleHorseHover={this.handleHorseHover}
@@ -132,14 +187,16 @@ class Home extends Component {
 						titleColor={titleColor}
 						leftTikiHue={leftTikiHue}
 						rightTikiHue={rightTikiHue}
+						clickCount={clickCount}
 					/>
-					<div>
+					<div className="rightColumn sideColumn">
 						<img
 							className={`imgHorizontalFlip cat ${catSpin}`}
 							src="images/cat-compress.gif"
 							alt="cat walk"
 							onClick={this.catSpin}
 						/>
+						{catsRight.map(cat => cat)}
 						<div
 							onClick={this.handleSecret}
 							className={`secretBox ${secretGlow && 'secretGlow'}`}
