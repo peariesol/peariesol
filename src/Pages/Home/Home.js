@@ -30,7 +30,8 @@ class Home extends Component {
 			leftTikiHue: 0,
 			rightTikiHue: 0,
 			catsLeft: [],
-			catsRight: []
+			catsRight: [],
+			lighteningImg: 'lightening_break-compress'
 		}
 	}
 
@@ -131,6 +132,12 @@ class Home extends Component {
 		}
 	}
 
+	handleLighteningClick = () => {
+		this.setState({
+			lighteningImg: 'fire420'
+		})
+	}
+
 	render() {
 		const {
 			mouseX,
@@ -145,83 +152,90 @@ class Home extends Component {
 			leftTikiHue,
 			rightTikiHue,
 			catsLeft,
-			catsRight
+			catsRight,
+			lighteningImg
 		} = this.state
 
 		return (
-			<div
-				className="home"
-				onMouseMove={this.trackMouse}
-				style={{
-					backgroundImage: `url(${
-						!secretClicked
-							? 'textures/hauntedhouselightening-compress.gif'
-							: 'textures/angel-with-bone-wings.jpg'
-					})`
-				}}
-			>
-				<img
-					className="bloodDrip"
-					src="gifs/blood_drip.gif"
-					alt="blood drip"
-					style={{ marginTop: -2 }}
-				/>
-				<div className="homeTop">
-					<div className="leftColumn sideColumn">
-						<img
-							className="cat"
-							src="images/cat-compress.gif"
-							alt="cat walk"
-							onClick={this.catSpin}
-						/>
-						{catsLeft.map(cat => cat)}
-					</div>
-
-					<CenterColumn
-						handleHorseHover={this.handleHorseHover}
-						handleHorseUnHover={this.handleHorseUnHover}
-						setInvertColors={this.setInvertColors}
-						changeTitleColor={this.changeTitleColor}
-						handleTikiClick={this.handleTikiClick}
-						invertColors={invertColors}
-						titleColor={titleColor}
-						leftTikiHue={leftTikiHue}
-						rightTikiHue={rightTikiHue}
-						clickCount={clickCount}
-					/>
-					<div className="rightColumn sideColumn">
-						<img
-							className={`imgHorizontalFlip cat ${catSpin}`}
-							src="images/cat-compress.gif"
-							alt="cat walk"
-							onClick={this.catSpin}
-						/>
-						{catsRight.map(cat => cat)}
-						<div
-							onClick={this.handleSecret}
-							className={`secretBox ${secretGlow && 'secretGlow'}`}
-						/>
-					</div>
-				</div>
-				<div className="homeBottom">
-					<img src="icons/lightening_break-compress.gif" alt="lightening" />
-				</div>
-				<Alert />
-				<img
-					className="bloodDrip"
-					src="gifs/blood_drip.gif"
-					alt="blood drip"
+			<div className="homeContainer">
+				<div
+					className="home"
+					onMouseMove={this.trackMouse}
 					style={{
-						margin: window.innerWidth < 500 ? '3px 0' : 0,
-						transform: 'rotate(180deg)'
+						backgroundImage: `url(${
+							!secretClicked
+								? 'textures/hauntedhouselightening-compress.gif'
+								: 'textures/angel-with-bone-wings.jpg'
+						})`
 					}}
-				/>
-				<Netscape
-					setNetscapeFollow={this.setNetscapeFollow}
-					netscapeFollow={netscapeFollow}
-					mouseX={mouseX}
-					mouseY={mouseY}
-				/>
+				>
+					<img
+						className="bloodDrip"
+						src="gifs/blood_drip.gif"
+						alt="blood drip"
+						style={{ marginTop: -2 }}
+					/>
+					<div className="homeTop">
+						<div className="leftColumn sideColumn">
+							<img
+								className="cat"
+								src="images/cat-compress.gif"
+								alt="cat walk"
+								onClick={this.catSpin}
+							/>
+							{catsLeft.map(cat => cat)}
+						</div>
+
+						<CenterColumn
+							handleHorseHover={this.handleHorseHover}
+							handleHorseUnHover={this.handleHorseUnHover}
+							setInvertColors={this.setInvertColors}
+							changeTitleColor={this.changeTitleColor}
+							handleTikiClick={this.handleTikiClick}
+							invertColors={invertColors}
+							titleColor={titleColor}
+							leftTikiHue={leftTikiHue}
+							rightTikiHue={rightTikiHue}
+							clickCount={clickCount}
+						/>
+						<div className="rightColumn sideColumn">
+							<img
+								className={`imgHorizontalFlip cat ${catSpin}`}
+								src="images/cat-compress.gif"
+								alt="cat walk"
+								onClick={this.catSpin}
+							/>
+							{catsRight.map(cat => cat)}
+							<div
+								onClick={this.handleSecret}
+								className={`secretBox ${secretGlow && 'secretGlow'}`}
+							/>
+						</div>
+					</div>
+					<div className="homeBottom">
+						<img
+							onClick={this.handleLighteningClick}
+							src={`icons/${lighteningImg}.gif`}
+							alt="lightening"
+						/>
+					</div>
+					<Alert />
+					<img
+						className="bloodDrip"
+						src="gifs/blood_drip.gif"
+						alt="blood drip"
+						style={{
+							margin: window.innerWidth < 500 ? '3px 0' : 0,
+							transform: 'rotate(180deg)'
+						}}
+					/>
+					<Netscape
+						setNetscapeFollow={this.setNetscapeFollow}
+						netscapeFollow={netscapeFollow}
+						mouseX={mouseX}
+						mouseY={mouseY}
+					/>
+				</div>
 			</div>
 		)
 	}

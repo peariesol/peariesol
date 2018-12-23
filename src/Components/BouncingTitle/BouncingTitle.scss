@@ -1,6 +1,10 @@
 $titleRadius: 120px;
+$titleRadiusLg: 160px;
+
 $bottom: calc(100vh - 120px);
 $right: calc(100vw - 120px);
+$bottomLg: calc(100vh - 160px);
+$rightLg: calc(100vw - 160px);
 
 .bouncingTitleBox {
 	z-index: 2;
@@ -48,5 +52,39 @@ $right: calc(100vw - 120px);
 @media (max-width: 500px) {
 	.bouncingTitleBox {
 		visibility: hidden;
+	}
+}
+
+@media (min-width: 1300px) {
+	.bouncingTitleBox {
+		animation: horizontalMove 12s linear infinite alternate,
+			verticalMove 8s linear infinite alternate;
+		width: $titleRadiusLg;
+		height: $titleRadiusLg;
+	}
+
+	.bouncingTitle {
+		font-size: $titleRadiusLg/3;
+		line-height: $titleRadiusLg/3;
+		max-height: 120px;
+		padding: 32px 0 0;
+	}
+
+	@keyframes verticalMove {
+		0% {
+			top: 10vh;
+		}
+		100% {
+			top: $bottomLg;
+		}
+	}
+
+	@keyframes horizontalMove {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: $rightLg;
+		}
 	}
 }

@@ -21,13 +21,13 @@ class Releases extends Component {
 			>
 				<span />
 				<div className="iframeBox">
-					{!this.state.loaded && <div className="loader">Loading...</div>}
+					{!this.state.loaded && (
+						<div className="loader">Patience is a virtue...</div>
+					)}
 					<iframe
+						className="iframePlayer"
 						style={{
 							visibility: this.state.loaded ? 'visible' : 'hidden',
-							border: 0,
-							width: 300,
-							height: 300,
 							animationPlayState: this.state.loaded ? 'running' : 'paused'
 						}}
 						onLoad={this.setLoaded}

@@ -52,7 +52,7 @@
 
 .mainImage {
 	width: 200px;
-	transition: 2s;
+	transition: 1s;
 }
 
 .invertColors {
@@ -102,5 +102,11 @@
 	.mainImage {
 		max-width: 200px;
 		width: 100%;
+	}
+}
+
+@media (min-width: 1300px) {
+	.mainImage {
+		width: 300px;
 	}
 }

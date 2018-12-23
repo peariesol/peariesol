@@ -67,16 +67,6 @@ const Routes = () => (
 			)}
 			component={FourOhFour}
 		/>
-		{false && (
-			<Route
-				path="/*"
-				render={props => (
-					<div className="page">
-						<FourOhFour {...props} />
-					</div>
-				)}
-			/>
-		)}
 	</Switch>
 )
 

@@ -29,24 +29,20 @@ a {
 	padding: 4px;
 	height: 24px;
 	color: lightgreen;
-	font-size: 20px;
 	animation: colorChange 1s linear infinite forwards;
 	animation-play-state: paused;
 	text-align: center;
-}
-
-.navLink {
 	p {
+		font-size: 20px;
 		margin: 0;
 		text-shadow: 2px 2px 1px black;
 	}
 }
-
 .normalNav:hover {
 	cursor: help;
 	animation-play-state: running;
-	font-size: 25px !important;
 	p {
+		font-size: 25px !important;
 		margin: -5px 0;
 		text-decoration: underline wavy;
 	}
@@ -109,7 +105,30 @@ a {
 }
 
 @media (max-width: 500px) {
-	p {
-		font-size: 0.9em;
+	.navLink {
+		height: 20px;
+		p {
+			font-size: 16px;
+		}
+	}
+	.normalNav:hover {
+		p {
+			font-size: 22px !important;
+		}
+	}
+}
+
+@media (min-width: 900px) {
+	.navLink {
+		height: 28px;
+		padding: 6px 8px;
+		p {
+			font-size: 24px;
+		}
+	}
+	.normalNav:hover {
+		p {
+			font-size: 32px !important;
+		}
 	}
 }

@@ -81,7 +81,7 @@
 }
 
 .hotLinkHeading {
-	width: 200px;
+	width: 250px;
 }
 
 .hotLinks {
@@ -216,6 +216,49 @@
 		100% {
 			font-size: 1em;
 			transform: rotate(3deg);
+		}
+	}
+}
+
+@media (min-width: 1300px) {
+	.pressQuotes {
+		flex-direction: column;
+	}
+
+	.pressQuote {
+		font-size: 1em;
+		font-family: cursive;
+		padding: 6px;
+		margin: 12px;
+		border-radius: 4px;
+	}
+
+	.pressLink {
+		font-size: 1.2em;
+		margin: 8px;
+		padding: 12px;
+		border-radius: 4px;
+	}
+
+	.hotLinkHeading {
+		width: 320px;
+	}
+
+	.hotLink {
+		height: 60px;
+		border-radius: 4px;
+		margin: 6px;
+		padding: 4px 12px;
+	}
+
+	@keyframes linkTwerk {
+		0% {
+			font-size: 1.2em;
+			transform: rotate(-2deg);
+		}
+		100% {
+			font-size: 1.6em;
+			transform: rotate(5deg);
 		}
 	}
 }

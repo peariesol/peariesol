@@ -1,31 +1,46 @@
 import React, { Component } from 'react'
 import './Media.css'
 
-const here = true
-
 class Media extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			alleyLoaded: false
+			alleyLoaded: false,
+			loveLoaded: false
 		}
 	}
 
-	setLoaded = propName => () => here && this.setState({ [propName]: true })
+	setLoaded = propName => () => this.setState({ [propName]: true })
 
 	render() {
 		return (
 			<div className="mediaPage">
 				<div className="videoContainer">
 					<h2 className="mediaHeading videos">Videos</h2>
-					{!this.state.alleyLoaded && <div className="loader">Loading...</div>}
 					<div className="videoBox">
+						{!this.state.alleyLoaded && (
+							<div className="loader">Patience is a virtue...</div>
+						)}
 						<iframe
 							style={{ display: this.state.alleyLoaded ? 'initial' : 'none' }}
 							onLoad={this.setLoaded('alleyLoaded')}
 							width="560"
 							height="315"
 							src="https://www.youtube.com/embed/XO7ZyiLq_dg"
+							frameBorder="1"
+							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowFullScreen
+							title="alley video"
+						/>
+						{!this.state.loveLoaded && (
+							<div className="loader">Patience is a virtue...</div>
+						)}
+						<iframe
+							style={{ display: this.state.loveLoaded ? 'initial' : 'none' }}
+							onLoad={this.setLoaded('loveLoaded')}
+							width="560"
+							height="315"
+							src="https://www.youtube.com/embed/tc2T5ZdKBF4"
 							frameBorder="1"
 							allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 							allowFullScreen
